@@ -30,7 +30,7 @@ export default function CtaBanner() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+            href={`tel:${site.contact.phonePrimary}`}
             className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-rose-600 font-semibold px-8 py-4 rounded-full text-base hover:bg-cream-100 transition-colors shadow-md"
           >
             <Phone size={18} />

@@ -93,7 +93,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                <a href={`tel:${site.contact.phonePrimary}`}
                   className="flex items-center gap-2 text-charcoal-400 hover:text-gold-400 text-sm transition-colors">
                   <Phone size={14} />
                   {site.contact.phone}

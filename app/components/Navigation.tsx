@@ -104,7 +104,7 @@ export default function Navigation() {
 
             {/* Call CTA */}
             <a
-              href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+              href={`tel:${site.contact.phonePrimary}`}
               className="flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors duration-200 shadow-sm"
             >
               <Phone size={15} />
@@ -168,7 +168,7 @@ export default function Navigation() {
           </div>
 
           <a
-            href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+            href={`tel:${site.contact.phonePrimary}`}
             className="mt-3 flex items-center justify-center gap-2 bg-rose-500 text-white py-3.5 rounded-xl font-semibold text-base hover:bg-rose-600 transition-colors"
             onClick={() => setMenuOpen(false)}
           >

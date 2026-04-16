@@ -47,7 +47,7 @@ export default function ContactSection() {
 
               {/* Call */}
               <a
-                href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                href={`tel:${site.contact.phonePrimary}`}
                 className="flex items-start justify-start gap-4 bg-white rounded-2xl p-5 border border-cream-300 card-lift group w-full"
               >
                 <div className="w-11 h-11 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center flex-shrink-0 group-hover:bg-rose-500 transition-colors">
@@ -248,7 +248,7 @@ export default function ContactSection() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+                    href={`tel:${site.contact.phonePrimary}`}
                     className="flex-1 flex items-center justify-center gap-2 bg-white text-rose-600 font-semibold py-3 rounded-xl text-sm hover:bg-cream-100 transition-colors"
                   >
                     <Phone size={16} />

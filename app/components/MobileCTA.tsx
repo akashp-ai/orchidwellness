@@ -31,7 +31,7 @@ export default function MobileCTA() {
 
         {/* ── Call — Rose/Pink (brand primary) ── */}
         <a
-          href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+          href={`tel:${site.contact.phonePrimary}`}
           className="flex flex-col items-center justify-center gap-1 rounded-xl py-2.5 text-white active:scale-95 transition-all"
           style={{ backgroundColor: "#E91E8C" }}
         >
