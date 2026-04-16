@@ -6,6 +6,15 @@ import { site } from "../lib/content";
 import { useLanguage, LANGUAGES } from "../contexts/LanguageContext";
 import Logo from "./Logo";
 
+/** Call Google Translate SDK programmatically after React re-renders settle */
+function triggerGoogleTranslate(langCode: string) {
+  setTimeout(() => {
+    if (typeof window === "undefined") return;
+    const w = window as Window & { __orchidTranslate?: (lang: string) => void };
+    w.__orchidTranslate?.(langCode);
+  }, 200);
+}
+
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled]   = useState(false);
@@ -75,12 +84,7 @@ export default function Navigation() {
                   onClick={() => {
                     const code = lang.code;
                     setLanguage(code);
-                    // Delay until after React re-render settles, then trigger Google Translate
-                    setTimeout(() => {
-                      if (typeof window !== "undefined" && (window as any).__orchidTranslate) {
-                        (window as any).__orchidTranslate(code);
-                      }
-                    }, 200);
+                    triggerGoogleTranslate(code);
                   }}
                   title={lang.full}
                   className={`px-2.5 py-1 text-xs font-medium transition-colors ${
@@ -149,11 +153,7 @@ export default function Navigation() {
                     const code = lang.code;
                     setLanguage(code);
                     setMenuOpen(false);
-                    setTimeout(() => {
-                      if (typeof window !== "undefined" && (window as any).__orchidTranslate) {
-                        (window as any).__orchidTranslate(code);
-                      }
-                    }, 200);
+                    triggerGoogleTranslate(code);
                   }}
                   className={`flex-1 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                     language === lang.code

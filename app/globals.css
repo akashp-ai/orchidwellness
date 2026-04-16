@@ -86,13 +86,13 @@ nav a, footer a, .chip-link {
   min-width: unset;
   display: inline;
 }
-/* Override for block-level card links — allow Tailwind flex utilities to control layout */
+/* Override for block-level card/button links — remove forced 44px tap target constraints */
 a.flex {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
   min-height: unset;
   min-width: unset;
+  /* NOTE: align-items intentionally NOT set here — let Tailwind items-* classes control it */
 }
 
 /* ─── Section reveal animation ──────────────────────── */

@@ -27,7 +27,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <Logo variant="footer" />
+              <Logo variant="footer" showTagline />
             </div>
             <p className="text-charcoal-400 text-sm leading-relaxed mb-5">{site.brand.description}</p>
             {site.sections.showSocialLinks && (
