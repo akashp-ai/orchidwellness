@@ -6,7 +6,7 @@ import { site } from "../lib/content";
 import { useLanguage, LANGUAGES } from "../contexts/LanguageContext";
 import Logo from "./Logo";
 
-/** Switch language via cookie + reload (handled by __orchidTranslate in layout) */
+/** Switch language via cookie + debounced reload (handled by __orchidTranslate in layout) */
 function triggerGoogleTranslate(langCode: string) {
   if (typeof window === "undefined") return;
   const w = window as Window & { __orchidTranslate?: (lang: string) => void };
@@ -15,7 +15,7 @@ function triggerGoogleTranslate(langCode: string) {
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled]   = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
@@ -37,6 +37,16 @@ export default function Navigation() {
     setMenuOpen(false);
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  /** Handle a language button click:
+   *  1. Update React state immediately → button highlights the new language at once
+   *  2. Call __orchidTranslate → updates cookie immediately, debounces the reload
+   *     so rapid clicks only trigger ONE reload for the LAST selected language */
+  const handleLangChange = (code: typeof LANGUAGES[number]["code"], closeMobile = false) => {
+    setLanguage(code);
+    if (closeMobile) setMenuOpen(false);
+    triggerGoogleTranslate(code);
   };
 
   return (
@@ -74,16 +84,13 @@ export default function Navigation() {
 
           {/* ── Desktop right: language switcher + CTA ── */}
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
-            {/* Language switcher — calls Google Translate for on-the-fly translation */}
+            {/* Language switcher */}
             <div className={`flex items-center rounded-full overflow-hidden border ${scrolled ? "border-cream-300 bg-white/60" : "border-white/30 bg-white/10"} backdrop-blur-sm`}>
               {LANGUAGES.map((lang, i) => (
                 <button
                   key={lang.code}
-                  onClick={() => {
-                    const code = lang.code;
-                    setLanguage(code);
-                    triggerGoogleTranslate(code);
-                  }}
+                  data-lang-btn          // used by JS to lock buttons during reload
+                  onClick={() => handleLangChange(lang.code)}
                   title={lang.full}
                   className={`px-2.5 py-1 text-xs font-medium transition-colors ${
                     i < LANGUAGES.length - 1 ? `border-r ${scrolled ? "border-cream-300" : "border-white/20"}` : ""
@@ -147,12 +154,8 @@ export default function Navigation() {
               {LANGUAGES.map((lang) => (
                 <button
                   key={lang.code}
-                  onClick={() => {
-                    const code = lang.code;
-                    setLanguage(code);
-                    setMenuOpen(false);
-                    triggerGoogleTranslate(code);
-                  }}
+                  data-lang-btn          // used by JS to lock buttons during reload
+                  onClick={() => handleLangChange(lang.code, true)}
                   className={`flex-1 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                     language === lang.code
                       ? "bg-rose-500 text-white"

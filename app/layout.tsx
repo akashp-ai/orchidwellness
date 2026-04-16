@@ -164,15 +164,41 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               })();
 
               // Called by the React language buttons (Navigation.tsx).
-              // Sets/clears the googtrans cookie then reloads for a clean translation state.
+              //
+              // DEBOUNCED + LAST-CLICK-WINS:
+              //   • Cookie is updated on EVERY click immediately, so the last language
+              //     clicked is always the one that gets applied — no race conditions.
+              //   • The actual reload only fires 500ms after the LAST click.
+              //   • If the user clicks mr → hi → en rapidly, only one reload happens
+              //     and it loads English (the last-clicked language).
+              //   • Once reload is triggered, all lang buttons are pointer-locked so
+              //     no extra clicks can queue another reload mid-navigation.
+              var __orchidPending = null;
+
               window.__orchidTranslate = function(langCode) {
+                // Cancel any queued reload — latest click takes over
+                if (__orchidPending) {
+                  clearTimeout(__orchidPending);
+                  __orchidPending = null;
+                }
+
+                // Persist and apply cookie immediately (last click wins)
                 try { localStorage.setItem('orchid-lang', langCode); } catch(e) {}
                 if (langCode === 'en') {
                   __gtCookie(null);
                 } else {
                   __gtCookie('/auto/' + langCode);
                 }
-                window.location.reload();
+
+                // Debounce: wait 500ms of silence before reloading
+                __orchidPending = setTimeout(function() {
+                  // Lock all language buttons to prevent clicks during reload
+                  document.querySelectorAll('[data-lang-btn]').forEach(function(b) {
+                    b.style.pointerEvents = 'none';
+                    b.style.opacity = '0.5';
+                  });
+                  window.location.reload();
+                }, 500);
               };
             `,
           }}
