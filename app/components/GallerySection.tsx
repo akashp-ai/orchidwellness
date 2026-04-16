@@ -6,6 +6,7 @@ import Image from "next/image";
 import { InstagramIcon } from "./SocialIcons";
 import { gallery, site } from "../lib/content";
 import { useLanguage } from "../contexts/LanguageContext";
+import { assetUrl } from "../lib/utils";
 
 export default function GallerySection() {
   const [lightbox, setLightbox] = useState<number | null>(null);
@@ -69,7 +70,7 @@ export default function GallerySection() {
                 aria-label={`View ${photo.caption}`}
               >
                 <Image
-                  src={photo.src}
+                  src={assetUrl(photo.src)}
                   alt={photo.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -199,7 +200,7 @@ export default function GallerySection() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={photos[lightbox].src}
+              src={assetUrl(photos[lightbox].src)}
               alt={photos[lightbox].alt}
               fill
               className="object-contain"

@@ -5,6 +5,7 @@ import { Heart, Award, Users, CheckCircle, Quote } from "lucide-react";
 import Image from "next/image";
 import { founder, site } from "../lib/content";
 import { useLanguage } from "../contexts/LanguageContext";
+import { assetUrl } from "../lib/utils";
 
 const iconMap: Record<string, React.ElementType> = { Heart, Award, Users };
 
@@ -42,7 +43,7 @@ export default function FounderSection() {
         {/* ── Left: full-bleed image panel ── */}
         <div className="relative h-[340px] lg:h-auto lg:min-h-[560px] bg-gradient-to-br from-rose-200 to-rose-100">
           <Image
-            src={founder.image.src}
+            src={assetUrl(founder.image.src)}
             alt={founder.image.alt}
             fill
             className="object-cover object-top"
