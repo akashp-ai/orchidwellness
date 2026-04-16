@@ -154,13 +154,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 document.cookie = base + expiry + '; path=/'; // fallback (localhost)
               }
 
-              // On every page load, read the actual googtrans cookie and sync
-              // localStorage so React language buttons highlight the correct language.
+              // On every fresh page load (including user-initiated refresh), clear the
+              // googtrans cookie and reset to English. Language selection is intentionally
+              // session-only: user picks a language, page reloads into that language,
+              // but a manual refresh always brings back clean English.
+              //
+              // How we distinguish a language-switch reload from a user refresh:
+              //   __orchidTranslate() sets sessionStorage.__orchidLang before reloading.
+              //   On the next load we check for it — if present it's our reload (keep the
+              //   selected language), if absent it's a real refresh (clear to English).
               (function syncLangState() {
-                var m = document.cookie.match(/(?:^|;\\s*)googtrans=\\/[^/]+\\/([^;]+)/);
-                var gtLang = m ? m[1] : 'en';
-                var lang = (gtLang === 'mr' || gtLang === 'hi') ? gtLang : 'en';
-                try { localStorage.setItem('orchid-lang', lang); } catch(e) {}
+                var pending = '';
+                try { pending = sessionStorage.getItem('__orchidLang') || ''; } catch(e) {}
+
+                if (pending === 'mr' || pending === 'hi') {
+                  // This is our own language-switch reload — keep the cookie intact
+                  // and update the React language state to match.
+                  try { localStorage.setItem('orchid-lang', pending); } catch(e) {}
+                  try { sessionStorage.removeItem('__orchidLang'); } catch(e) {}
+                } else {
+                  // Real refresh (or first load) — clear everything, show English
+                  __gtCookie(null);
+                  try { localStorage.setItem('orchid-lang', 'en'); } catch(e) {}
+                  try { sessionStorage.removeItem('__orchidLang'); } catch(e) {}
+                }
               })();
 
               // Called by the React language buttons (Navigation.tsx).
@@ -182,13 +199,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   __orchidPending = null;
                 }
 
-                // Persist and apply cookie immediately (last click wins)
-                try { localStorage.setItem('orchid-lang', langCode); } catch(e) {}
+                // Apply cookie immediately (last click wins)
                 if (langCode === 'en') {
                   __gtCookie(null);
+                  try { sessionStorage.removeItem('__orchidLang'); } catch(e) {}
                 } else {
                   __gtCookie('/auto/' + langCode);
+                  // Mark sessionStorage so syncLangState knows this reload is ours
+                  // (not a user-initiated refresh) and keeps the translation.
+                  try { sessionStorage.setItem('__orchidLang', langCode); } catch(e) {}
                 }
+                try { localStorage.setItem('orchid-lang', langCode); } catch(e) {}
 
                 // Debounce: wait 500ms of silence before reloading
                 __orchidPending = setTimeout(function() {
