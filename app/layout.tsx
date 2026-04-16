@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { site } from "./lib/content";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -48,14 +49,14 @@ export const metadata: Metadata = {
     title: site.brand.shortName,
   },
   formatDetection: {
-    telephone: false, // disable auto-linking phone numbers (we handle it ourselves)
+    telephone: false,
   },
   alternates: {
     canonical: site.seo.siteUrl,
   },
 };
 
-// LocalBusiness JSON-LD schema — updated with real Tarabai Park coordinates
+// LocalBusiness JSON-LD schema
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BeautySalon",
@@ -104,22 +105,34 @@ const structuredData = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        {/* Google Translate — cookie-based language switching
-            How it works:
-              • The "googtrans" cookie (/auto/mr, /auto/hi) tells GT which language
-                to apply when the page loads. Clearing it = back to English.
-              • We set/clear that cookie then reload. Each page load is a clean,
-                fully-translated state with zero leftover text from a previous language.
-              • autoDisplay:false hides the Google toolbar but translation still applies. */}
+
+        {/*
+          Cookie helpers + orchidTranslate — defined early so they're available
+          synchronously. These functions do NOT touch the DOM; they only read/write
+          cookies and localStorage, so they are safe to run in <head>.
+
+          How language switching works:
+            1. User clicks a language button in Navigation.tsx
+            2. __orchidTranslate(lang) is called
+            3. It sets/clears the "googtrans" cookie (/auto/mr, /auto/hi, or cleared)
+            4. Page reloads
+            5. After React hydration, the GT script loads (strategy="afterInteractive")
+            6. GT reads the cookie and translates — hydration is already done, no conflict
+
+          Loading GT *after* hydration (step 5-6) is the key fix for the hydration error.
+          Previously the GT script was in <head> and ran before React hydrated, causing
+          DOM mismatches.
+        */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
+              // Declare the GT init callback — must exist before the GT script loads
               function googleTranslateElementInit() {
                 new google.translate.TranslateElement({
                   pageLanguage: 'en',
@@ -128,24 +141,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 }, 'google_translate_element');
               }
 
-              // Set or clear the googtrans cookie on all domain variants.
-              // Must cover both "example.com" and ".example.com" for GT to see it.
+              // Set or clear the googtrans cookie on every relevant domain variant.
+              // GT requires the cookie on both "host" and ".host" to be picked up reliably.
               function __gtCookie(value) {
                 var host = window.location.hostname;
                 var domains = [host, '.' + host];
-                var expiry = value
-                  ? ''
-                  : '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+                var expiry = value ? '' : '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
                 var base = value ? ('googtrans=' + value) : 'googtrans=';
                 domains.forEach(function(d) {
                   document.cookie = base + expiry + '; path=/; domain=' + d;
                 });
-                // Also set without explicit domain (covers localhost & edge cases)
-                document.cookie = base + expiry + '; path=/';
+                document.cookie = base + expiry + '; path=/'; // fallback (localhost)
               }
 
-              // Sync localStorage with the actual googtrans cookie so the React
-              // language buttons show the correct active state after a reload.
+              // On every page load, read the actual googtrans cookie and sync
+              // localStorage so React language buttons highlight the correct language.
               (function syncLangState() {
                 var m = document.cookie.match(/(?:^|;\\s*)googtrans=\\/[^/]+\\/([^;]+)/);
                 var gtLang = m ? m[1] : 'en';
@@ -153,29 +163,43 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 try { localStorage.setItem('orchid-lang', lang); } catch(e) {}
               })();
 
-              // Called by the React language buttons.
-              // Sets/clears the googtrans cookie then reloads — guarantees a fully
-              // translated (or fully English) page with no partial DOM artifacts.
+              // Called by the React language buttons (Navigation.tsx).
+              // Sets/clears the googtrans cookie then reloads for a clean translation state.
               window.__orchidTranslate = function(langCode) {
                 try { localStorage.setItem('orchid-lang', langCode); } catch(e) {}
                 if (langCode === 'en') {
-                  __gtCookie(null);          // clear cookie → GT skips translation
+                  __gtCookie(null);
                 } else {
-                  __gtCookie('/auto/' + langCode); // set cookie → GT auto-translates
+                  __gtCookie('/auto/' + langCode);
                 }
                 window.location.reload();
               };
             `,
           }}
         />
-        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async />
       </head>
-      <body className="antialiased">
+
+      {/*
+        suppressHydrationWarning on <body>: GT adds class/style attributes to <body>
+        after hydration which would otherwise produce a warning. This suppresses it.
+      */}
+      <body className="antialiased" suppressHydrationWarning>
         {/* Hidden container required by Google Translate SDK */}
         <div id="google_translate_element" style={{ display: "none" }} />
+
         <LanguageProvider>
           {children}
         </LanguageProvider>
+
+        {/*
+          strategy="afterInteractive": Next.js loads this script AFTER React hydration
+          completes. This is the critical fix — GT can now modify the DOM safely without
+          conflicting with React's hydration reconciliation.
+        */}
+        <Script
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
