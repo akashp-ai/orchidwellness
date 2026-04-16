@@ -1,0 +1,108 @@
+{
+  "lang": "mr",
+  "langLabel": "मराठी",
+  "nav": {
+    "home": "मुख्यपृष्ठ",
+    "services": "सेवा",
+    "about": "आमच्याबद्दल",
+    "gallery": "गॅलरी",
+    "reviews": "अभिप्राय",
+    "contact": "संपर्क"
+  },
+  "common": {
+    "callNow": "आत्ता कॉल करा",
+    "whatsapp": "व्हॉट्सअ‍ॅप",
+    "directions": "दिशानिर्देश",
+    "bookAppointment": "भेट बुक करा",
+    "exploreServices": "सेवा पहा",
+    "bookService": "सेवा बुक करा",
+    "followInstagram": "इन्स्टाग्रामवर फॉलो करा",
+    "getDirections": "दिशानिर्देश मिळवा",
+    "inquireNow": "चौकशी करा",
+    "viewOnGoogle": "Google वर पहा",
+    "readReviews": "अभिप्राय वाचा"
+  },
+  "hero": {
+    "badge": "४.९★ रेटिंग · कोल्हापूरचे आघाडीचे सलॉन आणि स्पा",
+    "ratingLabel": "रेटिंग",
+    "happyClients": "समाधानी ग्राहक",
+    "since": "पासून"
+  },
+  "intro": {
+    "eyebrow": "केवळ सलॉनपेक्षा अधिक",
+    "statLabel": ""
+  },
+  "services": {
+    "eyebrow": "आमच्या सेवा",
+    "priceOnConsultation": "सल्लामसलतीनुसार",
+    "priceHidden": "किंमतीसाठी संपर्क करा",
+    "enquire": "चौकशी करा",
+    "ctaSubtext": "सेवेबद्दल प्रश्न आहेत? कॉल करा, WhatsApp करा किंवा भेट द्या — आम्ही मदत करण्यास तयार आहोत."
+  },
+  "offers": {
+    "eyebrow": "सध्याचे ऑफर",
+    "validLabel": "वैध:"
+  },
+  "reviews": {
+    "eyebrow": "ग्राहकांचे अनुभव",
+    "ratingLabel": "रेटिंग",
+    "reviewsLabel": "अभिप्राय",
+    "googleReviewsBtn": "सर्व Google अभिप्राय पहा",
+    "justdialBtn": "JustDial वर पहा"
+  },
+  "founder": {
+    "eyebrow": "आमचे संस्थापक",
+    "experienceLabel": "स्थापना वर्ष",
+    "certifications": "पार्श्वभूमी आणि ठळक मुद्दे"
+  },
+  "gallery": {
+    "eyebrow": "आमचे काम",
+    "watchUs": "आमचे काम पहा"
+  },
+  "contact": {
+    "eyebrow": "आम्हाला शोधा",
+    "heading": "संपर्क करा",
+    "subheading": "कामाच्या वेळेत कधीही येऊ शकता, किंवा खाली संपर्क करा — आम्ही नेहमी मदतीसाठी तयार आहोत.",
+    "callUs": "कॉल करा",
+    "tapToCall": "थेट कॉल करण्यासाठी टॅप करा",
+    "whatsappUs": "व्हॉट्सअ‍ॅप",
+    "quickReplies": "कामाच्या वेळेत लवकर प्रतिसाद",
+    "emailUs": "ईमेल",
+    "replyTime": "आम्ही २४ तासांत उत्तर देतो",
+    "addressLabel": "पत्ता",
+    "hoursLabel": "कामाचे तास",
+    "followLabel": "आम्हाला फॉलो करा",
+    "getDirections": "दिशानिर्देश मिळवा",
+    "readyToBook": "बुकिंग करायचे आहे?",
+    "readySubtext": "कॉल करा किंवा व्हॉट्सअ‍ॅप संदेश पाठवा — कोणतेही बुकिंग शुल्क नाही.",
+    "justdialLabel": "आम्हाला इथेही शोधा",
+    "googleReviews": "आमचे Google अभिप्राय वाचा"
+  },
+  "footer": {
+    "navigation": "नेव्हिगेशन",
+    "contact": "संपर्क",
+    "hours": "वेळ",
+    "allRights": "सर्व हक्क राखीव."
+  },
+  "announcement": {
+    "dismiss": "बंद करा"
+  },
+  "inquiry": {
+    "title": "काहीही विचारा",
+    "subtitle": "आम्ही लवकरच उत्तर देऊ",
+    "nameLabel": "तुमचे नाव",
+    "phonePlaceholder": "उदा. +91 98765 43210",
+    "queryLabel": "तुमचा प्रश्न",
+    "sendBtn": "चौकशी पाठवा",
+    "sending": "पाठवत आहे...",
+    "successTitle": "धन्यवाद!",
+    "successText": "आमची टीम लवकरच संपर्क करेल. Orchid मध्ये तुमचे स्वागत करण्यास आम्ही उत्सुक आहोत!",
+    "disclaimer": "कामाच्या वेळेत उत्तर दिले जाईल · स्पॅम नाही",
+    "errorText": "पाठवता आले नाही. कृपया थेट कॉल किंवा व्हॉट्सअ‍ॅप करा."
+  },
+  "mobileCta": {
+    "call": "कॉल",
+    "whatsapp": "व्हॉट्सअ‍ॅप",
+    "directions": "दिशा"
+  }
+}

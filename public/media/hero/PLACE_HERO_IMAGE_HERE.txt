@@ -1,0 +1,5 @@
+Place your hero/banner image here.
+File name: hero-og.jpg
+Size: 1200 x 630 pixels (for WhatsApp/social media previews)
+
+This image appears when someone shares your website link on WhatsApp or Facebook.

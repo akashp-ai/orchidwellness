@@ -1,0 +1,108 @@
+{
+  "lang": "hi",
+  "langLabel": "हिंदी",
+  "nav": {
+    "home": "होम",
+    "services": "सेवाएं",
+    "about": "हमारे बारे में",
+    "gallery": "गैलरी",
+    "reviews": "समीक्षाएं",
+    "contact": "संपर्क"
+  },
+  "common": {
+    "callNow": "अभी कॉल करें",
+    "whatsapp": "व्हाट्सएप",
+    "directions": "दिशा-निर्देश",
+    "bookAppointment": "अपॉइंटमेंट बुक करें",
+    "exploreServices": "सेवाएं देखें",
+    "bookService": "सेवा बुक करें",
+    "followInstagram": "Instagram पर फॉलो करें",
+    "getDirections": "दिशा-निर्देश पाएं",
+    "inquireNow": "अभी पूछताछ करें",
+    "viewOnGoogle": "Google पर देखें",
+    "readReviews": "समीक्षाएं पढ़ें"
+  },
+  "hero": {
+    "badge": "४.९★ रेटिंग · कोल्हापुर का प्रमुख सैलून और स्पा",
+    "ratingLabel": "रेटिंग",
+    "happyClients": "संतुष्ट ग्राहक",
+    "since": "से"
+  },
+  "intro": {
+    "eyebrow": "सिर्फ सैलून से कहीं बढ़कर",
+    "statLabel": ""
+  },
+  "services": {
+    "eyebrow": "हमारी सेवाएं",
+    "priceOnConsultation": "परामर्श के अनुसार",
+    "priceHidden": "कीमत के लिए संपर्क करें",
+    "enquire": "इस बारे में पूछें",
+    "ctaSubtext": "सेवा के बारे में सवाल हैं? कॉल करें, WhatsApp करें या आएं — हम मदद के लिए तैयार हैं।"
+  },
+  "offers": {
+    "eyebrow": "चल रहे ऑफर",
+    "validLabel": "वैध:"
+  },
+  "reviews": {
+    "eyebrow": "ग्राहकों के अनुभव",
+    "ratingLabel": "रेटिंग",
+    "reviewsLabel": "समीक्षाएं",
+    "googleReviewsBtn": "सभी Google समीक्षाएं देखें",
+    "justdialBtn": "JustDial पर देखें"
+  },
+  "founder": {
+    "eyebrow": "हमारे संस्थापक",
+    "experienceLabel": "स्थापना वर्ष",
+    "certifications": "पृष्ठभूमि और मुख्य बातें"
+  },
+  "gallery": {
+    "eyebrow": "हमारा काम",
+    "watchUs": "हमारा काम देखें"
+  },
+  "contact": {
+    "eyebrow": "हमें खोजें",
+    "heading": "संपर्क करें",
+    "subheading": "कार्य समय के दौरान कभी भी आएं, या नीचे संपर्क करें — हम हमेशा मदद के लिए तैयार हैं।",
+    "callUs": "कॉल करें",
+    "tapToCall": "सीधे कॉल करने के लिए टैप करें",
+    "whatsappUs": "व्हाट्सएप",
+    "quickReplies": "कार्य समय में त्वरित जवाब",
+    "emailUs": "ईमेल",
+    "replyTime": "हम 24 घंटे में जवाब देते हैं",
+    "addressLabel": "पता",
+    "hoursLabel": "कार्य समय",
+    "followLabel": "हमें फॉलो करें",
+    "getDirections": "दिशा-निर्देश पाएं",
+    "readyToBook": "बुकिंग करनी है?",
+    "readySubtext": "कॉल करें या व्हाट्सएप संदेश भेजें — कोई बुकिंग शुल्क नहीं।",
+    "justdialLabel": "हमें यहाँ भी खोजें",
+    "googleReviews": "हमारी Google समीक्षाएं पढ़ें"
+  },
+  "footer": {
+    "navigation": "नेविगेशन",
+    "contact": "संपर्क",
+    "hours": "समय",
+    "allRights": "सर्वाधिकार सुरक्षित।"
+  },
+  "announcement": {
+    "dismiss": "बंद करें"
+  },
+  "inquiry": {
+    "title": "कुछ भी पूछें",
+    "subtitle": "हम जल्द ही जवाब देंगे",
+    "nameLabel": "आपका नाम",
+    "phonePlaceholder": "जैसे +91 98765 43210",
+    "queryLabel": "आपका प्रश्न",
+    "sendBtn": "पूछताछ भेजें",
+    "sending": "भेज रहे हैं...",
+    "successTitle": "धन्यवाद!",
+    "successText": "हमारी टीम जल्द ही संपर्क करेगी। Orchid में आपका स्वागत करने के लिए हम उत्सुक हैं!",
+    "disclaimer": "कार्य समय में जवाब दिया जाएगा · कोई स्पैम नहीं",
+    "errorText": "भेज नहीं सका। कृपया सीधे कॉल या व्हाट्सएप करें।"
+  },
+  "mobileCta": {
+    "call": "कॉल",
+    "whatsapp": "व्हाट्सएप",
+    "directions": "दिशा"
+  }
+}

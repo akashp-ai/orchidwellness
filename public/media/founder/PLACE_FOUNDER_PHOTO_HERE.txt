@@ -1,0 +1,8 @@
+Replace this file with your founder photo.
+Rename your photo to: founder.jpg
+Then delete this text file.
+
+Photo tips:
+- Portrait orientation (taller than wide)
+- Good lighting, professional or semi-professional
+- JPG format preferred

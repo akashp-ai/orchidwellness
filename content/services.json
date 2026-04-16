@@ -1,0 +1,287 @@
+{
+  "_comment": "SERVICE CATALOGUE — Add, remove, or edit services here. Each category has an id, name, icon (Lucide icon name), and a list of services. To toggle pricing on/off globally, use sections.showPricing in site.json.",
+  "heading": "Our Services",
+  "subheading": "From signature hair transformations to deeply restorative spa rituals — everything you need, under one roof.",
+  "categories": [
+    {
+      "id": "hair-women",
+      "name": "Hair — Women",
+      "icon": "Scissors",
+      "emoji": "✂️",
+      "services": [
+        {
+          "name": "Haircut & Blow Dry",
+          "description": "Precision cut tailored to your face shape, finished with a professional blow-dry for that salon-fresh bounce."
+        },
+        {
+          "name": "Hair Wash & Blow Dry",
+          "description": "Deep cleanse with a nourishing shampoo and conditioner, styled to perfection."
+        },
+        {
+          "name": "Hair Ironing / Curling",
+          "description": "Sleek straight looks or bouncy curls — styled with heat protection for a lasting finish."
+        },
+        {
+          "name": "Keratin Treatment",
+          "description": "Frizz-free, glossy, and manageable hair that lasts for months. Perfect for thick or unruly hair."
+        },
+        {
+          "name": "Smoothening / Rebonding",
+          "description": "Chemical straightening treatment for pin-straight, silky-smooth hair with long-lasting results."
+        }
+      ]
+    },
+    {
+      "id": "hair-colour",
+      "name": "Hair Colour",
+      "icon": "Palette",
+      "emoji": "🎨",
+      "services": [
+        {
+          "name": "Global Hair Colour",
+          "description": "Full head colour using salon-grade dyes. Available in natural shades, fashion colours, and everything in between."
+        },
+        {
+          "name": "Highlights / Lowlights",
+          "description": "Dimensional colour that adds depth, brightness, or contrast — foil, balayage, or ombre style."
+        },
+        {
+          "name": "Balayage",
+          "description": "Hand-painted colour technique for a natural sun-kissed look with effortless grow-out."
+        },
+        {
+          "name": "Root Touch-Up",
+          "description": "Quick and precise root application to keep your colour looking fresh between full sessions."
+        },
+        {
+          "name": "Ombre / Dip Dye",
+          "description": "Gradual colour transition from dark roots to lighter tips, customised to your preference."
+        }
+      ]
+    },
+    {
+      "id": "men-grooming",
+      "name": "Men's Grooming",
+      "icon": "Zap",
+      "emoji": "💈",
+      "services": [
+        {
+          "name": "Haircut & Styling",
+          "description": "Sharp, clean cuts — from classic to contemporary. Every cut is styled and finished with precision."
+        },
+        {
+          "name": "Beard Shaping & Trim",
+          "description": "Defined lines, even length, and a clean neckline. Your beard, at its most refined."
+        },
+        {
+          "name": "Hot Towel Shave",
+          "description": "Traditional straight-razor shave with hot towel and post-shave balm — the full barbershop experience."
+        },
+        {
+          "name": "Men's Facial",
+          "description": "Deep cleanse, scrub, and massage tailored for men's thicker skin — leaves you looking refreshed and glowing."
+        },
+        {
+          "name": "D-Tan & Cleanup",
+          "description": "Remove sun tan, open pores, and dull skin. Quick, effective, and suitable for all skin types."
+        },
+        {
+          "name": "Head Massage",
+          "description": "Relaxing scalp and shoulder massage using warm oil to melt away tension and boost circulation."
+        }
+      ]
+    },
+    {
+      "id": "facials-skin",
+      "name": "Facials & Skincare",
+      "icon": "Star",
+      "emoji": "✨",
+      "services": [
+        {
+          "name": "Classic Facial",
+          "description": "Cleanse, exfoliate, steam, extract, and moisturise — the essential facial for healthy, balanced skin."
+        },
+        {
+          "name": "Gold Facial",
+          "description": "Luxury gold-infused facial to boost radiance, improve elasticity, and leave skin with a luminous glow."
+        },
+        {
+          "name": "Anti-Tan Facial",
+          "description": "Targeted de-tanning treatment to even skin tone and restore natural brightness after sun exposure."
+        },
+        {
+          "name": "Bridal Glow Facial",
+          "description": "Multi-step brightening and hydration ritual designed to give brides a radiant, camera-ready complexion."
+        },
+        {
+          "name": "Skin Cleanup",
+          "description": "A quick yet effective deep-pore cleanse — perfect for maintaining skin between full facial sessions."
+        }
+      ]
+    },
+    {
+      "id": "massage-therapies",
+      "name": "Massage Therapies",
+      "icon": "Leaf",
+      "emoji": "🧘",
+      "services": [
+        {
+          "name": "Swedish Full Body Massage",
+          "description": "A therapeutic full-body massage using warm oils to relieve muscle tension, reduce stress, and restore deep calm."
+        },
+        {
+          "name": "Aromatherapy Massage",
+          "description": "Essential oil-infused massage tailored to your mood — relaxing, uplifting, or energising — for a holistic experience."
+        },
+        {
+          "name": "Hot Stone Therapy",
+          "description": "Warm basalt stones melt away deep muscle tension while promoting circulation and profound relaxation."
+        },
+        {
+          "name": "Deep Tissue Massage",
+          "description": "Firm-pressure technique targeting deeper muscle layers to release chronic tension and knots."
+        },
+        {
+          "name": "Back & Shoulder Massage",
+          "description": "Focused pressure massage targeting the neck, back, and shoulders — ideal after a long week."
+        },
+        {
+          "name": "Couple's Spa Ritual",
+          "description": "Enjoy a shared spa experience — side-by-side massages with your partner in a calming, private setting."
+        }
+      ]
+    },
+    {
+      "id": "body-treatments",
+      "name": "Body Treatments",
+      "icon": "Flower2",
+      "emoji": "🌸",
+      "services": [
+        {
+          "name": "Full Body Scrub & Polish",
+          "description": "Exfoliating scrub that removes dead skin cells, revealing soft, smooth, and radiant skin from head to toe."
+        },
+        {
+          "name": "Herbal Body Wrap",
+          "description": "Detoxifying body wrap using herbal-infused linen to draw out impurities, tighten skin, and restore glow."
+        },
+        {
+          "name": "Steam Therapy Session",
+          "description": "Open pores, flush toxins, and deeply relax with a therapeutic steam session before your treatment."
+        },
+        {
+          "name": "De-Stress Body Ritual",
+          "description": "Our signature package — full body scrub, herbal wrap, and massage combined for complete renewal."
+        },
+        {
+          "name": "Foot Reflexology",
+          "description": "Pressure-point massage on the feet that promotes circulation, relieves fatigue, and restores energy."
+        }
+      ]
+    },
+    {
+      "id": "hair-spa",
+      "name": "Hair Spa & Rituals",
+      "icon": "Sparkles",
+      "emoji": "💆",
+      "services": [
+        {
+          "name": "Orchid Signature Hair Spa",
+          "description": "Our full ritual — deep cleanse, nourishing mask, scalp massage, and steam. Your hair will thank you."
+        },
+        {
+          "name": "Protein Hair Treatment",
+          "description": "Replenishes lost proteins in your hair for strength, elasticity, and reduced breakage."
+        },
+        {
+          "name": "Dandruff Treatment",
+          "description": "Targeted scalp treatment using anti-dandruff actives to soothe, cleanse, and balance your scalp."
+        },
+        {
+          "name": "Scalp Detox Ritual",
+          "description": "Deep-cleansing scalp treatment to remove buildup, balance oil production, and stimulate healthy hair growth."
+        }
+      ]
+    },
+    {
+      "id": "nails",
+      "name": "Nails & Hands",
+      "icon": "Hand",
+      "emoji": "💅",
+      "services": [
+        {
+          "name": "Classic Manicure",
+          "description": "Soaking, filing, shaping, cuticle care, and a fresh polish application — hands that feel and look immaculate."
+        },
+        {
+          "name": "Classic Pedicure",
+          "description": "Deep soak, scrub, callus removal, nail shaping, and moisturising — your feet deserve the royal treatment."
+        },
+        {
+          "name": "Gel Nails (Manicure)",
+          "description": "Long-lasting, chip-resistant gel colour with a high-shine finish. Lasts 2–3 weeks without fading."
+        },
+        {
+          "name": "Spa Pedicure",
+          "description": "Upgraded pedicure with an extended foot soak, scrub, mask, and massage — pure luxury for tired feet."
+        }
+      ]
+    },
+    {
+      "id": "bridal",
+      "name": "Bridal & Party",
+      "icon": "Crown",
+      "emoji": "👑",
+      "services": [
+        {
+          "name": "Bridal Makeup",
+          "description": "Full bridal look created with premium cosmetics. Includes base prep, eye look, lip, and dupatta setting."
+        },
+        {
+          "name": "Party Makeup",
+          "description": "Glamorous, occasion-ready makeup that photographs beautifully and lasts through the event."
+        },
+        {
+          "name": "Saree Draping",
+          "description": "Professional saree draping in a style of your choice — elegant, snug, and ready for any occasion."
+        },
+        {
+          "name": "Bridal Hair Styling",
+          "description": "Elaborate bridal updo or half-up style with flowers, accessories, and finishing spray for all-day hold."
+        },
+        {
+          "name": "Pre-Bridal Package",
+          "description": "Full pre-bridal prep — facials, waxing, hair ritual, and glow treatments. Ask us for a custom quote."
+        }
+      ]
+    },
+    {
+      "id": "waxing-threading",
+      "name": "Waxing & Threading",
+      "icon": "Minus",
+      "emoji": "🪡",
+      "services": [
+        {
+          "name": "Full Arms Waxing",
+          "description": "Smooth, long-lasting hair removal using skin-friendly wax for soft, even results."
+        },
+        {
+          "name": "Full Legs Waxing",
+          "description": "Complete leg wax from ankle to thigh, leaving skin touchably smooth."
+        },
+        {
+          "name": "Eyebrow Threading",
+          "description": "Defined, clean arches shaped to complement your face — precise and quick."
+        },
+        {
+          "name": "Upper Lip Threading",
+          "description": "Quick and effective hair removal for the upper lip area."
+        },
+        {
+          "name": "Full Face Waxing",
+          "description": "Gentle waxing of the full face for smooth, flawless skin — safe for sensitive skin."
+        }
+      ]
+    }
+  ]
+}

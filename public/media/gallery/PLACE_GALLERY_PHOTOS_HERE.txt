@@ -1,0 +1,10 @@
+Place your gallery photos here.
+Name them exactly: gallery-1.jpg, gallery-2.jpg, gallery-3.jpg, gallery-4.jpg, gallery-5.jpg, gallery-6.jpg
+
+Then update content/gallery.json to change the alt text and captions.
+You can use fewer than 6 photos — just update gallery.json to match.
+
+Photo tips:
+- JPG format
+- Square or landscape works best
+- Salon interior, services, results, ambience

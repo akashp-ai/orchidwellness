@@ -1,0 +1,60 @@
+{
+  "_comment": "GALLERY FILE — Update alt text and captions to match your photos. Drop files named gallery-1.jpg through gallery-6.jpg into /public/media/gallery/. For videos: replace the youtubeId values below with your own YouTube video IDs (e.g. the ID from https://youtu.be/YOUR_ID_HERE).",
+
+  "heading": "Our Space & Work",
+  "subheading": "A glimpse into the Orchid experience — where every detail is crafted with care.",
+
+  "instagramCta": {
+    "text": "Follow us on Instagram for daily looks and updates",
+    "handle": "@orchid_unisex_salon_spa",
+    "url": "https://www.instagram.com/orchid_unisex_salon_spa/"
+  },
+
+  "photos": [
+    {
+      "src": "/media/gallery/gallery-1.jpg",
+      "alt": "Orchid Unisex Salon & Spa — iconic entrance and brand décor",
+      "caption": "Our Brand"
+    },
+    {
+      "src": "/media/gallery/gallery-2.jpg",
+      "alt": "Premium salon seating area at Orchid",
+      "caption": "Salon Interior"
+    },
+    {
+      "src": "/media/gallery/gallery-3.jpg",
+      "alt": "Premium product collection at Orchid Salon",
+      "caption": "Premium Products"
+    },
+    {
+      "src": "/media/gallery/gallery-4.jpg",
+      "alt": "Reception at Orchid Unisex Salon & Spa",
+      "caption": "Our Reception"
+    },
+    {
+      "src": "/media/gallery/gallery-5.jpg",
+      "alt": "Spa treatment suite at Orchid Wellness",
+      "caption": "Spa Suite"
+    },
+    {
+      "src": "/media/gallery/gallery-6.jpg",
+      "alt": "Orchid salon ambience and interiors",
+      "caption": "Our Ambience"
+    }
+  ],
+
+  "videos": [
+    {
+      "_note": "Replace youtubeId with your own YouTube video ID. To find it: go to your YouTube video, copy the part after v= in the URL.",
+      "youtubeId": "Q8nkXcvPSVk",
+      "title": "The Orchid Experience — Salon & Spa Tour",
+      "caption": "Step inside Orchid and experience the calm from the very first moment."
+    },
+    {
+      "_note": "Replace youtubeId with your own YouTube video ID.",
+      "youtubeId": "vBe2RZmyV8s",
+      "title": "Relax, Restore, Renew — Spa Rituals at Orchid",
+      "caption": "Our signature spa treatments crafted for complete relaxation and rejuvenation."
+    }
+  ]
+}

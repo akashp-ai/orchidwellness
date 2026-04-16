@@ -1,0 +1,108 @@
+{
+  "lang": "en",
+  "langLabel": "EN",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "common": {
+    "callNow": "Call Now",
+    "whatsapp": "WhatsApp",
+    "directions": "Directions",
+    "bookAppointment": "Book Appointment",
+    "exploreServices": "Explore Services",
+    "bookService": "Book a Service",
+    "followInstagram": "Follow on Instagram",
+    "getDirections": "Get Directions",
+    "inquireNow": "Inquire Now",
+    "viewOnGoogle": "View on Google",
+    "readReviews": "Read Reviews"
+  },
+  "hero": {
+    "badge": "4.9★ Rated · Kolhapur's Premier Salon & Spa",
+    "ratingLabel": "rating",
+    "happyClients": "happy clients",
+    "since": "Since"
+  },
+  "intro": {
+    "eyebrow": "More Than a Salon",
+    "statLabel": ""
+  },
+  "services": {
+    "eyebrow": "What We Offer",
+    "priceOnConsultation": "On consultation",
+    "priceHidden": "Contact for price",
+    "enquire": "Enquire about this",
+    "ctaSubtext": "Have questions about a service? Call, WhatsApp, or drop by — we're happy to help."
+  },
+  "offers": {
+    "eyebrow": "Our Offers",
+    "validLabel": "Note:"
+  },
+  "reviews": {
+    "eyebrow": "Client Stories",
+    "ratingLabel": "rating",
+    "reviewsLabel": "reviews",
+    "googleReviewsBtn": "See All Google Reviews",
+    "justdialBtn": "View on JustDial"
+  },
+  "founder": {
+    "eyebrow": "Our Founder",
+    "experienceLabel": "Established",
+    "certifications": "Background & Highlights"
+  },
+  "gallery": {
+    "eyebrow": "Our Work",
+    "watchUs": "Watch Us Work"
+  },
+  "contact": {
+    "eyebrow": "Find Us",
+    "heading": "Get in Touch",
+    "subheading": "Walk in anytime during business hours, or reach out — we're always happy to help.",
+    "callUs": "Call Us",
+    "tapToCall": "Tap to call directly",
+    "whatsappUs": "WhatsApp",
+    "quickReplies": "Quick replies during business hours",
+    "emailUs": "Email",
+    "replyTime": "We reply within 24 hours",
+    "addressLabel": "Address",
+    "hoursLabel": "Business Hours",
+    "followLabel": "Follow Us",
+    "getDirections": "Get Directions",
+    "readyToBook": "Ready to Book?",
+    "readySubtext": "Call us or send a WhatsApp message to schedule your visit — no booking fee.",
+    "justdialLabel": "Also Find Us On",
+    "googleReviews": "Read Our Google Reviews"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "hours": "Hours",
+    "allRights": "All rights reserved."
+  },
+  "announcement": {
+    "dismiss": "Dismiss"
+  },
+  "inquiry": {
+    "title": "Ask Us Anything",
+    "subtitle": "We'll get back to you shortly",
+    "nameLabel": "Your Name",
+    "phonePlaceholder": "e.g. +91 98765 43210",
+    "queryLabel": "Your Query",
+    "sendBtn": "Send Inquiry",
+    "sending": "Sending...",
+    "successTitle": "Thank You!",
+    "successText": "Our team will reach out to you soon. We look forward to welcoming you at Orchid!",
+    "disclaimer": "We reply within business hours · No spam, ever.",
+    "errorText": "Could not send. Please call or WhatsApp us directly."
+  },
+  "mobileCta": {
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "directions": "Directions"
+  }
+}

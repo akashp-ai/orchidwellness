@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --gold:    #C9A96E;
+  --rose:    #B5547A;
+  --cream:   #FAF8F5;
+  --charcoal: #2C2C2C;
+  --blush:   #FDDCE6;
+}
+
+/* ─── Reset & base ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  /* Prevent layout shift when scrollbar appears/disappears */
+  scrollbar-gutter: stable;
+  /* iOS momentum scroll */
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  color: #2C2C2C;
+  background: #FAF8F5;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
+  /* iOS pull-to-refresh prevention when not needed */
+  overscroll-behavior-y: auto;
+}
+
+/* ─── Mobile touch UX ──────────────────────────────── */
+
+/* Remove blue flash on tap (iOS/Android) */
+* { -webkit-tap-highlight-color: transparent; }
+
+/* Faster tap response — no 300ms delay */
+a, button, [role="button"], input, textarea, select {
+  touch-action: manipulation;
+}
+
+/* Prevent iOS auto-zoom on input focus — must be ≥16px */
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+/* Active state feedback for touch */
+button:active, a:active { opacity: 0.85; }
+
+/* ─── Typography ───────────────────────────────────── */
+
+/* Minimum readable font sizes on mobile — excludes heading spans */
+p, li { font-size: clamp(0.875rem, 2.2vw, 1rem); }
+
+/* Spans inside headings must inherit heading size, not be capped at body size */
+h1 span, h2 span, h3 span, h4 span { font-size: inherit; }
+
+/* ─── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #FAF8F5; }
+::-webkit-scrollbar-thumb { background: #C9A96E; border-radius: 2px; }
+
+/* ─── Focus styles ──────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #B5547A;
+  outline-offset: 2px;
+}
+
+/* ─── Minimum tap target size (44×44px) ──────────────── */
+button, a, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Override for decorative/inline links that don't need 44px */
+nav a, footer a, .chip-link {
+  min-height: unset;
+  min-width: unset;
+  display: inline;
+}
+/* Override for block-level card links — allow Tailwind flex utilities to control layout */
+a.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: unset;
+  min-width: unset;
+}
+
+/* ─── Section reveal animation ──────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; }
+  .reveal { opacity: 1; transform: none; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ─── Nav glass ─────────────────────────────────────── */
+.nav-glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ─── Full-height hero (iOS Safari safe) ────────────── */
+.hero-full {
+  min-height: 100vh;                   /* fallback */
+  min-height: 100svh;                  /* small viewport height — excludes browser chrome */
+  min-height: 100dvh;                  /* dynamic — best for modern iOS/Android */
+}
+
+/* ─── Gold text gradient ────────────────────────────── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C9A96E 0%, #e8bc72 50%, #b8914d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Rose text gradient ────────────────────────────── */
+.text-rose-gradient {
+  background: linear-gradient(135deg, #D9608F 0%, #B5547A 50%, #963E61 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Gold + Rose combined gradient text ────────────── */
+.text-luxury-gradient {
+  background: linear-gradient(135deg, #C9A96E 0%, #D9608F 60%, #B5547A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Decorative divider ─────────────────────────────── */
+.divider-gold {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A96E, transparent);
+  margin: 0 auto;
+}
+.divider-rose {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #B5547A, transparent);
+  margin: 0 auto;
+}
+
+/* ─── Card hover lift (disabled on touch devices) ───── */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+@media (hover: hover) {
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(44, 26, 38, 0.12);
+  }
+}
+
+/* ─── Image overlay ─────────────────────────────────── */
+.img-overlay { position: relative; overflow: hidden; }
+.img-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 5, 15, 0.55) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ─── Mobile CTA bar — safe area for iPhone home bar ── */
+.mobile-cta-bar {
+  padding-bottom: env(safe-area-inset-bottom, 8px);
+}
+
+/* ─── Suppress Google Translate toolbar ─────────────── */
+.goog-te-banner-frame,
+.skiptranslate > iframe {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+  position: static !important;
+}
+.goog-te-gadget { font-size: 0 !important; }
+.goog-logo-link { display: none !important; }
+
+/* ─── Hide scrollbar (tab strips, horizontal scrolls) ── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* ─── Button styles ─────────────────────────────────── */
+.btn-rose {
+  background: #B5547A;
+  color: white;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+@media (hover: hover) {
+  .btn-rose:hover {
+    background: #963E61;
+    box-shadow: 0 8px 24px rgba(181, 84, 122, 0.35);
+  }
+}
+
+.btn-gold {
+  background: #C9A96E;
+  color: #1A1A1A;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+@media (hover: hover) {
+  .btn-gold:hover {
+    background: #b8914d;
+    box-shadow: 0 8px 24px rgba(201, 169, 110, 0.40);
+  }
+}
+
+/* ─── Blush background pattern ──────────────────────── */
+.blush-pattern {
+  background-color: #FDF2F6;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(217, 96, 143, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(201, 169, 110, 0.07) 0%, transparent 50%);
+}
+
+/* ─── Utilities ─────────────────────────────────────── */
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+/* ─── iOS-specific safe area padding ────────────────── */
+@supports (padding: max(0px)) {
+  .safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 16px); }
+  .safe-top    { padding-top: max(env(safe-area-inset-top), 0px); }
+}

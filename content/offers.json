@@ -1,0 +1,51 @@
+{
+  "_comment": "OFFERS FILE — Add, edit, or remove offers here. Set enabled:false to hide an offer without deleting it. Set announcementBar.enabled:false to hide the top bar.",
+
+  "heading": "Special Offers",
+  "subheading": "Exclusive deals on our most loved services — crafted for our valued clients.",
+
+  "announcementBar": {
+    "_note": "Thin banner at the very top of the page. Set enabled:false to hide it.",
+    "enabled": true,
+    "badge": "Welcome Offer",
+    "text": "✨ New clients enjoy 20% off their first visit — walk in or call to book",
+    "ctaText": "Book Now",
+    "ctaHref": "#contact"
+  },
+
+  "offers": [
+    {
+      "id": "new-client",
+      "enabled": true,
+      "badge": "New Clients",
+      "title": "First Visit Offer",
+      "subtitle": "20% off your first service",
+      "description": "Visiting Orchid for the first time? We'd love to welcome you with 20% off any single service — haircut, facial, spa, colour, or bridal. No exclusions, no minimum spend.",
+      "validity": "For first-time clients only. One per person.",
+      "ctaText": "Claim This Offer",
+      "ctaHref": "#contact"
+    },
+    {
+      "id": "bridal-package",
+      "enabled": true,
+      "badge": "Bridal",
+      "title": "Bridal Bliss Package",
+      "subtitle": "Complimentary pre-bridal trial",
+      "description": "Book our complete bridal package and receive a complimentary pre-bridal trial session. Covers skincare, hair ritual, makeup, and full-day styling — crafted to make your special day unforgettable.",
+      "validity": "Advance booking required (30+ days before the date). Subject to availability.",
+      "ctaText": "Inquire Now",
+      "ctaHref": "#contact"
+    },
+    {
+      "id": "spa-monday",
+      "enabled": true,
+      "badge": "Every Monday",
+      "title": "Spa Monday",
+      "subtitle": "Your weekly wellness ritual",
+      "description": "Every Monday is Spa Day at Orchid. Enjoy special pricing on Full Body Massage, De-Stress Ritual, and Body Wraps — the perfect way to reset and recharge for the week ahead.",
+      "validity": "Every Monday during regular business hours. Booking recommended.",
+      "ctaText": "Book a Spa Day",
+      "ctaHref": "#contact"
+    }
+  ]
+}

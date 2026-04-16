@@ -1,0 +1,100 @@
+{
+  "_comment": "EDIT THIS FILE to add, update, or remove customer reviews. Each review needs a name, location, rating (1-5), and text.",
+  "heading": "What Our Clients Say",
+  "subheading": "Real experiences from the people who matter most — our clients.",
+  "averageRating": "4.9",
+  "totalReviews": "50",
+  "ratingSource": "Google",
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Priya Deshmukh",
+      "location": "Kolhapur",
+      "rating": 5,
+      "date": "March 2025",
+      "text": "I got my keratin treatment done here and the results are absolutely stunning. My hair was frizzy and unmanageable for years — after just one session at Orchid, it's silky, soft, and so easy to style. The staff was incredibly warm and the ambiance felt so relaxing. Highly recommend!",
+      "service": "Keratin Treatment",
+      "avatar": "PD"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Patil",
+      "location": "Kolhapur",
+      "rating": 5,
+      "date": "February 2025",
+      "text": "Best haircut and beard shaping I've had in Kolhapur. The stylist really listened to what I wanted and executed it perfectly. The salon is clean, well-maintained, and the service is excellent quality. I won't go anywhere else now.",
+      "service": "Haircut & Beard Shaping",
+      "avatar": "RP"
+    },
+    {
+      "id": 3,
+      "name": "Sneha Kulkarni",
+      "location": "Kolhapur",
+      "rating": 5,
+      "date": "April 2025",
+      "text": "Got the bridal makeup done for my wedding and I couldn't have been happier! They understood exactly what I wanted — subtle, traditional, and long-lasting. I was glowing in every single photo. The bridal package they offered was comprehensive and so worth it.",
+      "service": "Bridal Makeup",
+      "avatar": "SK"
+    },
+    {
+      "id": 4,
+      "name": "Vikram Shinde",
+      "location": "Kolhapur",
+      "rating": 5,
+      "date": "March 2025",
+      "text": "The head massage and hair spa ritual here is truly therapeutic. After a stressful week, I walked out feeling like a new person. The oils they use smell amazing and the massage technique is professional. I've made this a monthly ritual now.",
+      "service": "Head Massage & Hair Spa",
+      "avatar": "VS"
+    },
+    {
+      "id": 5,
+      "name": "Anjali More",
+      "location": "Kolhapur",
+      "rating": 5,
+      "date": "April 2025",
+      "text": "The balayage colour I got done here is absolutely gorgeous. I'd been nervous about doing colour for the first time but the stylist walked me through everything, showed me reference looks, and the end result exceeded my expectations. Natural, beautiful, and so well-blended.",
+      "service": "Balayage",
+      "avatar": "AM"
+    },
+    {
+      "id": 6,
+      "name": "Suresh Jadhav",
+      "location": "Kolhapur",
+      "rating": 5,
+      "date": "February 2025",
+      "text": "Very professional salon with a great atmosphere. I brought my wife and we both got services done together — she got the facial and I got a haircut and shave. Both of us were very satisfied. The staff is friendly and there's no rush — they take their time and do it right.",
+      "service": "Couple Visit",
+      "avatar": "SJ"
+    },
+    {
+      "id": 7,
+      "name": "Pooja Bhosale",
+      "location": "Kolhapur",
+      "rating": 4,
+      "date": "March 2025",
+      "text": "Really lovely experience overall. The gold facial left my skin incredibly glowing for days. I appreciated how hygienic everything was — fresh towels, sanitised tools, the works. My only note would be that it gets a little busy on weekends, so booking ahead is a good idea!",
+      "service": "Gold Facial",
+      "avatar": "PB"
+    },
+    {
+      "id": 8,
+      "name": "Aditya Kamble",
+      "location": "Kolhapur",
+      "rating": 5,
+      "date": "April 2025",
+      "text": "Orchid is on a completely different level. The attention to detail — from the welcome, to the consultation, to the finishing — is remarkable. Got a full hair treatment and haircut and felt absolutely premium. Worth every rupee. Glad this place opened in Kolhapur!",
+      "service": "Hair Treatment & Haircut",
+      "avatar": "AK"
+    },
+    {
+      "id": 9,
+      "name": "Meera Nair",
+      "location": "Visiting from Pune",
+      "rating": 5,
+      "date": "March 2025",
+      "text": "Was visiting family in Kolhapur and squeezed in a spa session at Orchid on a recommendation. I'm so glad I did — the de-stress body ritual was outstanding. Knowledgeable therapist, great pressure, and a beautiful calm environment. Will definitely come back on my next visit.",
+      "service": "De-Stress Body Ritual",
+      "avatar": "MN"
+    }
+  ]
+}

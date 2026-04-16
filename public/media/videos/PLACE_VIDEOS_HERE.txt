@@ -1,0 +1,10 @@
+Place your video and thumbnail here.
+Video file: video-1.mp4
+Thumbnail image: video-1-thumb.jpg
+
+Then update the "videos" section in content/gallery.json.
+
+Video tips:
+- MP4 format
+- Keep under 20MB for fast loading
+- Salon tour, service demo, or transformation video

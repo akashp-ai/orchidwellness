@@ -1,0 +1,42 @@
+{
+  "_comment": "EDIT THIS FILE to update the founder's name, story, values, and image. Replace the image src with the actual photo file path under /public/media/founder/.",
+  "badge": "Meet the Founder",
+  "name": "Vidya Kalyankar",
+  "title": "Founder, Orchid Unisex Salon & Spa",
+  "experience": "2025",
+  "tagline": "\"A great salon isn't just about skills — it's about making every person feel seen, valued, and at home.\"",
+  "story": [
+    "Vidya Kalyankar is not your typical salon founder. She didn't come from a beauty school or a professional styling background — she came from something arguably more powerful: a lifetime of nurturing people, managing households, and building genuine human connections.",
+    "As an entrepreneur and homemaker, Vidya understood better than most what it means to care for others — not as a transaction, but as a calling. When she envisioned Orchid Unisex Salon & Spa, her goal was simple: create a space where every client walks in feeling like a guest and walks out feeling like the best version of themselves.",
+    "Her exceptional people management instincts — honed through years of running a home and building relationships in the community of Kolhapur — shaped the very soul of Orchid. She personally handpicked the team, set the standards for hospitality, and ensured that warmth and trust are as much a part of the experience as any treatment.",
+    "Today, Orchid stands as Kolhapur's newest and most promising wellness destination — built not on fancy certifications, but on the genuine care and personal touch that Vidya has woven into every corner of the salon."
+  ],
+  "values": [
+    {
+      "icon": "Heart",
+      "title": "Genuine Warmth",
+      "description": "Every client is welcomed like a guest in our home — with care, attention, and respect."
+    },
+    {
+      "icon": "Users",
+      "title": "People First",
+      "description": "Exceptional people management means our team is happy, skilled, and passionate about serving you."
+    },
+    {
+      "icon": "Award",
+      "title": "Community Trust",
+      "description": "Built on word-of-mouth and real relationships — our reputation comes from clients, not advertising."
+    }
+  ],
+  "certifications": [
+    "Entrepreneurship & Business Management",
+    "Community Leadership, Kolhapur",
+    "Hospitality & Client Experience Standards",
+    "Trained & Certified Salon Team under her supervision"
+  ],
+  "image": {
+    "src": "/media/founder/founder.png",
+    "alt": "Vidya Kalyankar, Founder of Orchid Unisex Salon & Spa",
+    "_note": "To replace: copy your photo to /public/media/founder/founder.png (or .jpg) and update the src above."
+  }
+}

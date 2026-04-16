@@ -1,0 +1,84 @@
+{
+  "_comment": "MASTER SETTINGS FILE — edit this file to update brand details, contact info, social links, section visibility, and SEO. No code knowledge needed.",
+
+  "brand": {
+    "name": "Orchid Unisex Salon & Spa",
+    "tagline": "Where Beauty Meets Calm",
+    "shortName": "Orchid",
+    "establishedYear": "2025",
+    "description": "Kolhapur's premier unisex salon and spa — where premium care meets personalised attention for every man and woman."
+  },
+
+  "contact": {
+    "_note": "Use the exact format shown. Phone is for display; whatsapp must include country code (91 for India) with no spaces or +.",
+    "phone": "072769 97855",
+    "whatsapp": "917276997855",
+    "email": "orchidunisexsaloonspa@gmail.com"
+  },
+
+  "address": {
+    "_note": "Update all fields. mapEmbedUrl: go to Google Maps → your salon → Share → Embed a map → copy the src URL.",
+    "line1": "5th Floor, Aurum Lohia Apartment",
+    "line2": "Aditya Corner, Opposite Purohit Sweets",
+    "area": "Tarabai Park",
+    "city": "Kolhapur",
+    "district": "Kolhapur",
+    "state": "Maharashtra",
+    "pin": "416003",
+    "fullAddress": "5th Floor, Aurum Lohia Apartment, Aditya Corner, Opposite Purohit Sweets, Tarabai Park, Kolhapur, Maharashtra 416003",
+    "googleMapsUrl": "https://www.google.com/maps/place/Orchid+Unisex+Salon+%26+Spa/@16.7112701,74.2379448,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc101ddc1ddc2d9:0xd369553db10d3026!8m2!3d16.7112701!4d74.2405197!16s%2Fg%2F11xm4c503_",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.579454093432!2d74.23794479999999!3d16.7112701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc101ddc1ddc2d9%3A0xd369553db10d3026!2sOrchid%20Unisex%20Salon%20%26%20Spa!5e0!3m2!1sen!2sin!4v1744800000000!5m2!1sen!2sin"
+  },
+
+  "timings": {
+    "mondayToSaturday": "10:00 AM – 8:30 PM",
+    "sunday": "11:00 AM – 7:00 PM",
+    "displayRows": [
+      { "days": "Monday – Saturday", "hours": "10:00 AM – 8:30 PM" },
+      { "days": "Sunday", "hours": "11:00 AM – 7:00 PM" }
+    ]
+  },
+
+  "social": {
+    "_note": "Paste the full URL for each platform. Leave empty string if you don't have that platform.",
+    "instagram": "https://www.instagram.com/orchid_unisex_salon_spa/",
+    "instagramHandle": "@orchid_unisex_salon_spa",
+    "facebook": "https://www.facebook.com/people/Orchid-unisex-salon-and-spa/61585381589169/",
+    "justdial": "https://www.justdial.com/Kolhapur/Orchid-Unisex-Salon-and-Spa-Near-Kelavkar-Hospital-Tarabai-Park/0231PX231-X231-250819140905-G4D5_BZDET",
+    "googleReviews": "https://www.google.com/maps/place/Orchid+Unisex+Salon+%26+Spa/@16.7112701,74.2379448,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc101ddc1ddc2d9:0xd369553db10d3026!8m2!3d16.7112701!4d74.2405197!16s%2Fg%2F11xm4c503_"
+  },
+
+  "ratings": {
+    "score": "4.9",
+    "count": "50",
+    "platform": "Google"
+  },
+
+  "seo": {
+    "siteUrl": "https://akashp-ai.github.io/orchidwellness",
+    "defaultTitle": "Orchid Unisex Salon & Spa | Tarabai Park, Kolhapur",
+    "defaultDescription": "Premium unisex salon and spa in Tarabai Park, Kolhapur. Hair, skin, bridal, spa, and wellness services for men and women. Rated 4.9★. Book your appointment today.",
+    "keywords": "salon kolhapur, spa kolhapur, unisex salon kolhapur, bridal makeup kolhapur, hair colour kolhapur, orchid salon, tarabai park salon, kolhapur beauty parlour",
+    "ogImage": "/media/hero/hero-og.jpg"
+  },
+
+  "credits": {
+    "_note": "Developer credit shown at the bottom of the footer. Set enabled to false to hide it. Leave link empty for plain text.",
+    "enabled": true,
+    "text": "Designed & Developed by Akash Pol",
+    "link": ""
+  },
+
+  "sections": {
+    "_note": "Set any section to false to hide it from the website. Set back to true to show it again.",
+    "showServices": true,
+    "showPricing": false,
+    "showFounder": true,
+    "showGallery": true,
+    "showVideos": true,
+    "showReviews": true,
+    "showOffers": true,
+    "showMap": true,
+    "showSocialLinks": true
+  }
+}
