@@ -122,73 +122,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 }, 'google_translate_element');
               }
 
-              // Returns true if Google Translate has translated the page
-              function __isTranslated() {
-                var cls = document.documentElement.className;
-                return cls.indexOf('translated-ltr') >= 0 || cls.indexOf('translated-rtl') >= 0;
-              }
-
-              // Try to restore original English by clicking GT's own "Show original" button
-              // inside its hidden banner iframe — the most reliable no-reload method.
-              function __gtRestore() {
-                var iframes = document.querySelectorAll('iframe');
-                for (var i = 0; i < iframes.length; i++) {
-                  try {
-                    var d = iframes[i].contentDocument || iframes[i].contentWindow.document;
-                    var links = d.querySelectorAll('a');
-                    for (var j = 0; j < links.length; j++) {
-                      var txt = (links[j].textContent || '') + (links[j].className || '');
-                      if (/original|restore/i.test(txt)) {
-                        links[j].click();
-                        return true;
-                      }
-                    }
-                    // Fallback: first <a> inside the GT banner is usually "Show original"
-                    var firstLink = d.querySelector('a');
-                    if (firstLink) { firstLink.click(); return true; }
-                  } catch(e) {}
-                }
-                return false;
-              }
-
               // Trigger Google Translate programmatically.
-              // Must be called AFTER React re-renders settle (use setTimeout 200ms in callers).
+              // English → always reload (page is natively English; reload is instant from cache
+              //           and guarantees zero leftover translated text regardless of how fast
+              //           the user toggled between languages).
+              // Mr / Hi → drive the hidden .goog-te-combo select, retry until widget is ready.
               window.__orchidTranslate = function(langCode) {
+                if (langCode === 'en') {
+                  // Persist choice so LanguageContext stays "EN" after reload
+                  try { localStorage.setItem('orchid-lang', 'en'); } catch(e) {}
+                  window.location.reload();
+                  return;
+                }
+
+                // Translate to Marathi or Hindi
                 function go(attempts) {
                   var combo = document.querySelector('.goog-te-combo');
                   if (!combo) {
                     if (attempts > 0) setTimeout(function() { go(attempts - 1); }, 300);
                     return;
                   }
-
-                  if (langCode === 'en') {
-                    // Step 1 — set combo to empty and fire change (works when GT is cooperative)
-                    combo.value = '';
-                    ['input', 'change'].forEach(function(type) {
-                      combo.dispatchEvent(new Event(type, { bubbles: true, cancelable: true }));
-                    });
-
-                    // Step 2 — after a short delay, check if still translated and use banner button
-                    setTimeout(function() {
-                      if (!__isTranslated()) return; // already restored, done
-                      if (__gtRestore()) return;      // banner button worked
-
-                      // Step 3 — last resort: reload (page is natively English, will be fast)
-                      setTimeout(function() {
-                        if (__isTranslated()) {
-                          try { localStorage.setItem('orchid-lang', 'en'); } catch(e) {}
-                          window.location.reload();
-                        }
-                      }, 500);
-                    }, 400);
-
-                  } else {
-                    // Translate to Marathi / Hindi
-                    combo.value = langCode;
-                    ['input', 'change'].forEach(function(type) {
-                      combo.dispatchEvent(new Event(type, { bubbles: true, cancelable: true }));
-                    });
-                  }
+                  combo.value = langCode;
+                  ['input', 'change'].forEach(function(type) {
+                    combo.dispatchEvent(new Event(type, { bubbles: true, cancelable: true }));
+                  });
                 }
                 go(5);
               };
