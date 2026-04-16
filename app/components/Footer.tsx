@@ -1,7 +1,7 @@
 "use client";
 
-import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
-import { InstagramIcon, FacebookIcon, JustDialIcon, GoogleIcon } from "./SocialIcons";
+import { Phone, MapPin, Clock } from "lucide-react";
+import { InstagramIcon, FacebookIcon, WhatsAppIcon, JustDialIcon, GoogleIcon } from "./SocialIcons";
 import Logo from "./Logo";
 import { site } from "../lib/content";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -32,23 +32,37 @@ export default function Footer() {
             <p className="text-charcoal-400 text-sm leading-relaxed mb-5">{site.brand.description}</p>
             {site.sections.showSocialLinks && (
               <div className="flex gap-3 flex-wrap">
+                {/* Instagram */}
                 <a href={site.social.instagram} target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-rose-500 flex items-center justify-center transition-colors" aria-label="Instagram">
+                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center transition-all hover:scale-110"
+                  style={{ /* Instagram gradient on hover handled via group or inline */ }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)")}
+                  onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.1)")}
+                  aria-label="Instagram">
                   <InstagramIcon size={16} />
                 </a>
+                {/* Facebook — official #1877F2 */}
                 <a href={site.social.facebook} target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-colors" aria-label="Facebook">
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#1877F2] flex items-center justify-center transition-all hover:scale-110" aria-label="Facebook">
                   <FacebookIcon size={16} />
+                </a>
+                {/* WhatsApp — official #25D366 */}
+                <a href={`https://wa.me/${site.contact.whatsapp}`} target="_blank" rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition-all hover:scale-110" aria-label="WhatsApp">
+                  <WhatsAppIcon size={16} />
                 </a>
                 {site.social.justdial && (
                   <a href={site.social.justdial} target="_blank" rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-colors" aria-label="JustDial">
+                    className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center transition-all hover:scale-110"
+                    onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#FF6600")}
+                    onMouseLeave={e => (e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.1)")}
+                    aria-label="JustDial">
                     <JustDialIcon size={16} />
                   </a>
                 )}
                 {site.social.googleReviews && (
                   <a href={site.social.googleReviews} target="_blank" rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-white/10 hover:bg-white flex items-center justify-center transition-colors" aria-label="Google Reviews">
+                    className="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-charcoal-800 flex items-center justify-center transition-all hover:scale-110" aria-label="Google Reviews">
                     <GoogleIcon size={16} />
                   </a>
                 )}
@@ -87,8 +101,8 @@ export default function Footer() {
               </li>
               <li>
                 <a href={waLink} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-charcoal-400 hover:text-green-400 text-sm transition-colors">
-                  <MessageCircle size={14} />
+                  className="flex items-center gap-2 text-charcoal-400 hover:text-[#25D366] text-sm transition-colors">
+                  <WhatsAppIcon size={14} />
                   WhatsApp Us
                 </a>
               </li>

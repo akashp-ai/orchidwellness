@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Phone, MessageCircle, MapPin, Clock, Navigation, Mail, ExternalLink } from "lucide-react";
-import { InstagramIcon, FacebookIcon, JustDialIcon, GoogleIcon } from "./SocialIcons";
+import { Phone, MapPin, Clock, Navigation, Mail, ExternalLink } from "lucide-react";
+import { InstagramIcon, FacebookIcon, WhatsAppIcon, JustDialIcon, GoogleIcon } from "./SocialIcons";
 import { site } from "../lib/content";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -71,8 +71,8 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="flex items-start justify-start gap-4 bg-white rounded-2xl p-5 border border-cream-300 card-lift group w-full"
               >
-                <div className="w-11 h-11 rounded-xl bg-green-50 border border-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500 transition-colors">
-                  <MessageCircle size={18} className="text-green-500 group-hover:text-white transition-colors" />
+                <div className="w-11 h-11 rounded-xl bg-green-50 border border-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-[#25D366] transition-colors">
+                  <WhatsAppIcon size={18} className="text-[#25D366] group-hover:text-white transition-colors" />
                 </div>
                 <div className="text-left min-w-0">
                   <div className="text-xs text-charcoal-400 font-medium uppercase tracking-wider mb-1">
@@ -159,30 +159,46 @@ export default function ContactSection() {
                     {t("contact.followLabel")}
                   </h3>
                   <div className="flex flex-wrap gap-3">
+                    {/* Instagram — official purple→pink→orange gradient */}
                     <a
                       href={site.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-gradient-to-r from-rose-500 to-gold-400 text-white px-4 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+                      className="flex items-center gap-2 text-white px-4 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+                      style={{ background: "linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)" }}
                     >
                       <InstagramIcon size={15} />
                       Instagram
                     </a>
+                    {/* Facebook — official brand blue */}
                     <a
                       href={site.social.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2.5 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors"
+                      className="flex items-center gap-2 text-white px-4 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+                      style={{ backgroundColor: "#1877F2" }}
                     >
                       <FacebookIcon size={15} />
                       Facebook
+                    </a>
+                    {/* WhatsApp — official brand green */}
+                    <a
+                      href={waLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-white px-4 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+                      style={{ backgroundColor: "#25D366" }}
+                    >
+                      <WhatsAppIcon size={15} />
+                      WhatsApp
                     </a>
                     {site.social.justdial && (
                       <a
                         href={site.social.justdial}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-orange-500 text-white px-4 py-2.5 rounded-full text-sm font-medium hover:bg-orange-600 transition-colors"
+                        className="flex items-center gap-2 text-white px-4 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+                        style={{ backgroundColor: "#FF6600" }}
                       >
                         <JustDialIcon size={15} className="text-white" />
                         JustDial
@@ -193,11 +209,11 @@ export default function ContactSection() {
                         href={site.social.googleReviews}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-white border border-cream-300 text-charcoal-700 px-4 py-2.5 rounded-full text-sm font-medium hover:bg-cream-100 transition-colors"
+                        className="flex items-center gap-2 bg-white border border-gray-200 text-charcoal-700 px-4 py-2.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors shadow-sm"
                       >
                         <GoogleIcon size={15} />
-                        Google
-                        <ExternalLink size={11} className="opacity-50" />
+                        Google Reviews
+                        <ExternalLink size={11} className="opacity-40" />
                       </a>
                     )}
                   </div>
@@ -242,9 +258,10 @@ export default function ContactSection() {
                     href={waLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 bg-green-500 text-white font-semibold py-3 rounded-xl text-sm hover:bg-green-600 transition-colors"
+                    className="flex-1 flex items-center justify-center gap-2 text-white font-semibold py-3 rounded-xl text-sm hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: "#25D366" }}
                   >
-                    <MessageCircle size={16} />
+                    <WhatsAppIcon size={16} />
                     {t("common.whatsapp")}
                   </a>
                 </div>

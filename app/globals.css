@@ -72,28 +72,11 @@ h1 span, h2 span, h3 span, h4 span { font-size: inherit; }
   outline-offset: 2px;
 }
 
-/* ─── Minimum tap target size (44×44px) ──────────────── */
-button, a, [role="button"] {
-  min-height: 44px;
-  min-width: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-/* Override for decorative/inline links that don't need 44px */
-nav a, footer a, .chip-link {
-  min-height: unset;
-  min-width: unset;
-  display: inline;
-}
-/* Override for block-level card/button links — remove forced 44px tap target constraints */
-a.flex {
-  display: flex;
-  justify-content: flex-start;
-  min-height: unset;
-  min-width: unset;
-  /* NOTE: align-items intentionally NOT set here — let Tailwind items-* classes control it */
-}
+/* ─── Touch targets ───────────────────────────────────── */
+/* Each component controls its own layout/sizing via Tailwind.
+   We do NOT impose global display/height on <a> or <button> —
+   that breaks inline text links, multi-line cards, and grid layouts.
+   Sufficient tap area is achieved through padding in each component. */
 
 /* ─── Section reveal animation ──────────────────────── */
 .reveal {

@@ -1,6 +1,7 @@
 "use client";
 
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
+import { WhatsAppIcon } from "./SocialIcons";
 import { home, site } from "../lib/content";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -39,9 +40,10 @@ export default function CtaBanner() {
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-rose-700 hover:bg-rose-800 text-white font-semibold px-8 py-4 rounded-full text-base transition-colors shadow-md"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-full text-base transition-opacity hover:opacity-90 shadow-md"
+            style={{ backgroundColor: "#25D366" }}
           >
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={18} />
             {t("common.whatsapp")}
           </a>
         </div>

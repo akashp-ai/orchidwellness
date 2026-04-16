@@ -115,7 +115,7 @@ export default function Navigation() {
           {/* ── Mobile hamburger ── */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? "text-charcoal-800 hover:bg-rose-50" : "text-white hover:bg-white/15"}`}
+            className={`md:hidden p-2 rounded-lg transition-colors flex items-center justify-center ${scrolled ? "text-charcoal-800 hover:bg-rose-50" : "text-white hover:bg-white/15"}`}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}

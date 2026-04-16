@@ -121,7 +121,7 @@ export default function Testimonials() {
           <div className="hidden lg:grid grid-cols-3 gap-4 mt-12">
             {reviews.reviews.slice(0, 3).map((r, i) => (
               <button key={r.id} onClick={() => setActive(i)}
-                className={`text-left bg-white/10 hover:bg-white/15 rounded-2xl p-5 transition-all border ${active === i ? "border-gold-400" : "border-white/10"}`}
+                className={`block w-full text-left bg-white/10 hover:bg-white/15 rounded-2xl p-5 transition-all border ${active === i ? "border-gold-400" : "border-white/10"}`}
               >
                 <div className="flex gap-0.5 mb-3">
                   {[...Array(r.rating)].map((_, j) => (
