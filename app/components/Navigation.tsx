@@ -6,13 +6,11 @@ import { site } from "../lib/content";
 import { useLanguage, LANGUAGES } from "../contexts/LanguageContext";
 import Logo from "./Logo";
 
-/** Call Google Translate SDK programmatically after React re-renders settle */
+/** Switch language via cookie + reload (handled by __orchidTranslate in layout) */
 function triggerGoogleTranslate(langCode: string) {
-  setTimeout(() => {
-    if (typeof window === "undefined") return;
-    const w = window as Window & { __orchidTranslate?: (lang: string) => void };
-    w.__orchidTranslate?.(langCode);
-  }, 200);
+  if (typeof window === "undefined") return;
+  const w = window as Window & { __orchidTranslate?: (lang: string) => void };
+  w.__orchidTranslate?.(langCode);
 }
 
 export default function Navigation() {

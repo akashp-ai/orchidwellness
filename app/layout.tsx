@@ -110,7 +110,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        {/* Google Translate — enables on-the-fly Marathi/Hindi translation of all page content */}
+        {/* Google Translate — cookie-based language switching
+            How it works:
+              • The "googtrans" cookie (/auto/mr, /auto/hi) tells GT which language
+                to apply when the page loads. Clearing it = back to English.
+              • We set/clear that cookie then reload. Each page load is a clean,
+                fully-translated state with zero leftover text from a previous language.
+              • autoDisplay:false hides the Google toolbar but translation still applies. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -122,32 +128,42 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 }, 'google_translate_element');
               }
 
-              // Trigger Google Translate programmatically.
-              // English → always reload (page is natively English; reload is instant from cache
-              //           and guarantees zero leftover translated text regardless of how fast
-              //           the user toggled between languages).
-              // Mr / Hi → drive the hidden .goog-te-combo select, retry until widget is ready.
-              window.__orchidTranslate = function(langCode) {
-                if (langCode === 'en') {
-                  // Persist choice so LanguageContext stays "EN" after reload
-                  try { localStorage.setItem('orchid-lang', 'en'); } catch(e) {}
-                  window.location.reload();
-                  return;
-                }
+              // Set or clear the googtrans cookie on all domain variants.
+              // Must cover both "example.com" and ".example.com" for GT to see it.
+              function __gtCookie(value) {
+                var host = window.location.hostname;
+                var domains = [host, '.' + host];
+                var expiry = value
+                  ? ''
+                  : '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+                var base = value ? ('googtrans=' + value) : 'googtrans=';
+                domains.forEach(function(d) {
+                  document.cookie = base + expiry + '; path=/; domain=' + d;
+                });
+                // Also set without explicit domain (covers localhost & edge cases)
+                document.cookie = base + expiry + '; path=/';
+              }
 
-                // Translate to Marathi or Hindi
-                function go(attempts) {
-                  var combo = document.querySelector('.goog-te-combo');
-                  if (!combo) {
-                    if (attempts > 0) setTimeout(function() { go(attempts - 1); }, 300);
-                    return;
-                  }
-                  combo.value = langCode;
-                  ['input', 'change'].forEach(function(type) {
-                    combo.dispatchEvent(new Event(type, { bubbles: true, cancelable: true }));
-                  });
+              // Sync localStorage with the actual googtrans cookie so the React
+              // language buttons show the correct active state after a reload.
+              (function syncLangState() {
+                var m = document.cookie.match(/(?:^|;\\s*)googtrans=\\/[^/]+\\/([^;]+)/);
+                var gtLang = m ? m[1] : 'en';
+                var lang = (gtLang === 'mr' || gtLang === 'hi') ? gtLang : 'en';
+                try { localStorage.setItem('orchid-lang', lang); } catch(e) {}
+              })();
+
+              // Called by the React language buttons.
+              // Sets/clears the googtrans cookie then reloads — guarantees a fully
+              // translated (or fully English) page with no partial DOM artifacts.
+              window.__orchidTranslate = function(langCode) {
+                try { localStorage.setItem('orchid-lang', langCode); } catch(e) {}
+                if (langCode === 'en') {
+                  __gtCookie(null);          // clear cookie → GT skips translation
+                } else {
+                  __gtCookie('/auto/' + langCode); // set cookie → GT auto-translates
                 }
-                go(5);
+                window.location.reload();
               };
             `,
           }}
