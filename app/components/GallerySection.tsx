@@ -1,12 +1,96 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import Image from "next/image";
 import { InstagramIcon } from "./SocialIcons";
 import { gallery, site } from "../lib/content";
 import { useLanguage } from "../contexts/LanguageContext";
 import { assetUrl } from "../lib/utils";
+
+/** Lightweight YouTube embed.
+ *  - Uses youtube-nocookie.com: no tracking cookies until play, slightly faster iframe init
+ *  - Shows a custom thumbnail + play button; iframe only mounts on click (zero network cost until played)
+ *  - Handles both regular (16:9) and Shorts (9:16) aspect ratios
+ *  - Shows a spinner while the iframe is loading
+ */
+function VideoCard({ video, index, isActive, onActivate }: {
+  video: { youtubeId: string; isShort?: boolean; title: string; caption: string };
+  index: number;
+  isActive: boolean;
+  onActivate: (i: number) => void;
+}) {
+  const [iframeReady, setIframeReady] = useState(false);
+  const aspectClass = video.isShort ? "aspect-[9/16]" : "aspect-video";
+
+  // Reset iframe-ready state when card is deactivated
+  useEffect(() => {
+    if (!isActive) setIframeReady(false);
+  }, [isActive]);
+
+  const embedUrl =
+    `https://www.youtube-nocookie.com/embed/${video.youtubeId}` +
+    `?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white`;
+
+  // YouTube thumbnail — hqdefault (480×360) is reliable for both regular & Shorts
+  const thumbUrl = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
+
+  return (
+    <div className="rounded-2xl overflow-hidden shadow-lg bg-charcoal-900 relative group">
+      {isActive ? (
+        /* ── Live iframe — only mounts after user taps play ── */
+        <div className={`${aspectClass} relative bg-black`}>
+          {/* Spinner shown until iframe fires onLoad */}
+          {!iframeReady && (
+            <div className="absolute inset-0 flex items-center justify-center z-10">
+              <div className="w-10 h-10 border-4 border-white/20 border-t-white rounded-full animate-spin" />
+            </div>
+          )}
+          <iframe
+            src={embedUrl}
+            title={video.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            onLoad={() => setIframeReady(true)}
+            className={`w-full h-full transition-opacity duration-300 ${iframeReady ? "opacity-100" : "opacity-0"}`}
+          />
+        </div>
+      ) : (
+        /* ── Tap-to-play poster — zero iframe / JS cost until tapped ── */
+        <button
+          onClick={() => onActivate(index)}
+          className={`w-full ${aspectClass} flex flex-col items-center justify-center relative overflow-hidden`}
+          aria-label={`Play: ${video.title}`}
+        >
+          {/* Thumbnail — loaded as plain <img> so it doesn't block hydration */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={thumbUrl}
+            alt={video.title}
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Dark gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+          {/* Play button */}
+          <div className="relative z-10 flex flex-col items-center gap-3">
+            <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/70 flex items-center justify-center group-hover:bg-white/35 group-hover:scale-110 transition-all duration-200 shadow-xl">
+              <Play size={26} className="text-white ml-1.5 fill-white" />
+            </div>
+          </div>
+
+          {/* Title + caption pinned to bottom */}
+          <div className="absolute bottom-0 left-0 right-0 z-10 p-4 text-center">
+            <p className="text-white font-semibold text-sm leading-snug drop-shadow">{video.title}</p>
+            <p className="text-white/65 text-xs mt-1 leading-snug">{video.caption}</p>
+          </div>
+        </button>
+      )}
+    </div>
+  );
+}
 
 export default function GallerySection() {
   const [lightbox, setLightbox] = useState<number | null>(null);
@@ -36,10 +120,23 @@ export default function GallerySection() {
     return () => document.removeEventListener("keydown", onKey);
   }, [lightbox]);
 
+  // When a new video is activated, stop the previous one
+  const handleActivate = useCallback((i: number) => {
+    setActiveVideo(i);
+  }, []);
+
   if (!site.sections.showGallery) return null;
 
   const photos = gallery.photos;
-  const videos = gallery.videos ?? [];
+  const videos = (gallery.videos ?? []) as Array<{
+    youtubeId: string;
+    isShort?: boolean;
+    title: string;
+    caption: string;
+  }>;
+
+  // Are all videos Shorts? → use narrower, portrait grid
+  const allShorts = videos.length > 0 && videos.every((v) => v.isShort);
 
   return (
     <section id="gallery" className="py-16 lg:py-28 bg-white">
@@ -66,7 +163,7 @@ export default function GallerySection() {
               <button
                 key={i}
                 onClick={() => setLightbox(i)}
-                className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden card-lift group bg-rose-100"
+                className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden card-lift group bg-rose-50"
                 aria-label={`View ${photo.caption}`}
               >
                 <Image
@@ -75,9 +172,10 @@ export default function GallerySection() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   unoptimized
+                  loading={i < 3 ? "eager" : "lazy"}
                   sizes="(max-width: 640px) 50vw, 33vw"
                 />
-                {/* Hover overlay */}
+                {/* Hover caption overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-rose-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-3 sm:p-4">
                   <span className="text-white text-xs sm:text-sm font-medium">{photo.caption}</span>
                 </div>
@@ -97,50 +195,28 @@ export default function GallerySection() {
                 </h3>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              {/*
+                Shorts grid: constrain max width so tall portrait cards don't
+                stretch too wide on large screens. Center on desktop.
+              */}
+              <div className={`mx-auto grid grid-cols-2 gap-4 sm:gap-6 ${
+                allShorts ? "max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg" : "max-w-4xl"
+              }`}>
                 {videos.map((video, i) => (
-                  <div key={i} className="rounded-2xl overflow-hidden shadow-lg bg-charcoal-900 relative group">
-                    {activeVideo === i ? (
-                      /* ── YouTube embed (lazy — only loads when tapped) ── */
-                      <div className="aspect-video">
-                        <iframe
-                          src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
-                          title={video.title}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full"
-                          loading="lazy"
-                        />
-                      </div>
-                    ) : (
-                      /* ── Tap-to-play thumbnail ── */
-                      <button
-                        onClick={() => setActiveVideo(i)}
-                        className="w-full aspect-video flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-rose-900 via-rose-800 to-charcoal-900 relative overflow-hidden"
-                        aria-label={`Play: ${video.title}`}
-                      >
-                        {/* YouTube thumbnail background */}
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
-                          alt={video.title}
-                          className="absolute inset-0 w-full h-full object-cover opacity-50"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                        {/* Play button */}
-                        <div className="relative z-10 w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/60 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-200">
-                          <Play size={22} className="text-white ml-1 fill-white" />
-                        </div>
-                        <div className="relative z-10 text-center px-4">
-                          <p className="text-white font-semibold text-sm">{video.title}</p>
-                          <p className="text-white/60 text-xs mt-1">{video.caption}</p>
-                        </div>
-                      </button>
-                    )}
-                  </div>
+                  <VideoCard
+                    key={video.youtubeId}
+                    video={video}
+                    index={i}
+                    isActive={activeVideo === i}
+                    onActivate={handleActivate}
+                  />
                 ))}
               </div>
 
+              {/* Tap-to-play hint */}
+              <p className="text-center text-charcoal-400 text-xs mt-4">
+                Tap a video to play · Videos load only when you tap them
+              </p>
             </div>
           )}
 
@@ -170,7 +246,7 @@ export default function GallerySection() {
         </div>
       </div>
 
-      {/* ── Lightbox ── */}
+      {/* ── Photo Lightbox ── */}
       {lightbox !== null && (
         <div
           className="fixed inset-0 z-[80] bg-black/95 flex items-center justify-center p-4"
