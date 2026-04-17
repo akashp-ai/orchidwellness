@@ -32,7 +32,7 @@ export default function FounderSection() {
           {t("founder.eyebrow")}
         </span>
         <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold text-charcoal-900">
-          The Heart Behind Orchid
+          The Vision Behind Orchid
         </h2>
         <div className="divider-gold mt-5" />
       </div>

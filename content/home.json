@@ -1,11 +1,11 @@
 {
   "_comment": "EDIT THIS FILE to update the homepage hero text, intro section, and highlights.",
   "hero": {
-    "badge": "Kolhapur's New Premium Salon & Spa",
-    "headline": "Your Best Look,\nEvery Single Day",
-    "subheadline": "Step into a space where expert hands, premium products, and a warm atmosphere come together to reveal the best version of you.",
+    "badge": "Kolhapur's Premier Spa, Massage & Wellness Studio",
+    "headline": "Heal. Restore.\nFeel Extraordinary.",
+    "subheadline": "Expert therapeutic massages, rejuvenating spa rituals, and premium salon care — crafted for athletes, active lifestyles, and everyone who deserves to feel their absolute best.",
     "primaryCta": {
-      "text": "Book an Appointment",
+      "text": "Book a Treatment",
       "href": "#contact"
     },
     "secondaryCta": {
@@ -14,9 +14,9 @@
     }
   },
   "intro": {
-    "badge": "Our Promise",
-    "heading": "More Than a Salon.\nA Sanctuary.",
-    "body": "At Orchid, we believe every visit should feel like a reset — a moment just for you. Launched in 2025, we are crafting personalised experiences for both men and women, blending traditional techniques with modern trends to deliver results that speak for themselves. Whether you walk in for a quick trim or a full spa ritual, you leave feeling your absolute best.",
+    "badge": "Our Philosophy",
+    "heading": "Where Recovery\nMeets Radiance.",
+    "body": "At Orchid, we are more than a salon — we are Kolhapur's dedicated wellness and recovery studio. Built for the athlete pushing physical limits, the bodybuilder managing muscle recovery, the gym-goer carrying post-workout soreness, the senior citizen seeking gentle therapeutic relief, the frequent traveller unwinding after long journeys, and anyone living with chronic body pain or daily stress. Our certified therapists blend advanced massage techniques and healing spa rituals with premium salon and skincare services — delivering a complete experience that restores your body, calms your mind, and reveals your best self.",
     "stats": [
       { "value": "Est. 2025", "label": "New Premium Venture" },
       { "value": "4.8★", "label": "Rated on Google" },
@@ -26,29 +26,29 @@
   },
   "highlights": [
     {
-      "icon": "Sparkles",
-      "title": "Premium Products Only",
-      "description": "We use top-tier, skin-safe products chosen for lasting results and zero compromise on your hair and skin health."
+      "icon": "Activity",
+      "title": "Therapeutic Recovery",
+      "description": "From deep tissue and sports massage to hot stone therapy — our treatments target post-workout soreness, muscle tension, joint stiffness, and chronic body pain with clinical precision."
     },
     {
       "icon": "Users",
-      "title": "Expert Stylists",
-      "description": "Our team stays ahead of the curve with ongoing training in cutting, colouring, skincare, and spa therapies."
+      "title": "Built for Every Body",
+      "description": "Athletes, bodybuilders, senior citizens, gym-goers, sports persons, and frequent travellers — our spa and wellness treatments are personalised to every lifestyle and physical need."
     },
     {
-      "icon": "Heart",
-      "title": "Unisex & Inclusive",
-      "description": "Everyone is welcome here. Our services are designed for all genders, ages, and hair types — no exceptions."
+      "icon": "Sparkles",
+      "title": "Spa, Wellness & Salon",
+      "description": "A complete destination — restorative body wraps, signature facials, therapeutic massages, and precision salon services. Everything you need, all under one roof."
     },
     {
       "icon": "Shield",
-      "title": "Hygienic & Safe",
-      "description": "We maintain strict hygiene standards — fresh towels, sterilised tools, and a clean environment for every client."
+      "title": "Hygienic & Trusted",
+      "description": "We maintain strict hygiene standards — sterilised tools, fresh towels, and a clean, safe environment for every client, every single visit."
     }
   ],
   "ctaBanner": {
-    "heading": "Ready for Your Transformation?",
-    "subheading": "Walk in or book ahead — we're ready when you are.",
+    "heading": "Ready for Recovery & Relaxation?",
+    "subheading": "Whether you're managing body pain, post-workout soreness, travel fatigue, or simply need a full reset — we're ready for you.",
     "primaryCta": { "text": "Call Us Now", "href": "tel:+917276997855" },
     "secondaryCta": { "text": "WhatsApp Us", "href": "https://wa.me/917276997855" }
   }

@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Sparkles, Users, Heart, Shield } from "lucide-react";
+import { Sparkles, Users, Heart, Shield, Activity } from "lucide-react";
 import { home } from "../lib/content";
 import { useLanguage } from "../contexts/LanguageContext";
 
 const iconMap: Record<string, React.ElementType> = {
-  Sparkles, Users, Heart, Shield,
+  Sparkles, Users, Heart, Shield, Activity,
 };
 
 export default function IntroBanner() {

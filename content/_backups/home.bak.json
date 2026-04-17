@@ -1,0 +1,55 @@
+{
+  "_comment": "BACKUP of home.json before spa-focus rewrite — April 2026. To restore: copy this file's content back into content/home.json",
+  "hero": {
+    "badge": "Kolhapur's New Premium Salon & Spa",
+    "headline": "Your Best Look,\nEvery Single Day",
+    "subheadline": "Step into a space where expert hands, premium products, and a warm atmosphere come together to reveal the best version of you.",
+    "primaryCta": {
+      "text": "Book an Appointment",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "text": "Explore Services",
+      "href": "#services"
+    }
+  },
+  "intro": {
+    "badge": "Our Promise",
+    "heading": "More Than a Salon.\nA Sanctuary.",
+    "body": "At Orchid, we believe every visit should feel like a reset — a moment just for you. Launched in 2025, we are crafting personalised experiences for both men and women, blending traditional techniques with modern trends to deliver results that speak for themselves. Whether you walk in for a quick trim or a full spa ritual, you leave feeling your absolute best.",
+    "stats": [
+      { "value": "Est. 2025", "label": "New Premium Venture" },
+      { "value": "4.8★", "label": "Rated on Google" },
+      { "value": "5000+", "label": "Happy Clients" },
+      { "value": "20+", "label": "Services Offered" }
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "Sparkles",
+      "title": "Premium Products Only",
+      "description": "We use top-tier, skin-safe products chosen for lasting results and zero compromise on your hair and skin health."
+    },
+    {
+      "icon": "Users",
+      "title": "Expert Stylists",
+      "description": "Our team stays ahead of the curve with ongoing training in cutting, colouring, skincare, and spa therapies."
+    },
+    {
+      "icon": "Heart",
+      "title": "Unisex & Inclusive",
+      "description": "Everyone is welcome here. Our services are designed for all genders, ages, and hair types — no exceptions."
+    },
+    {
+      "icon": "Shield",
+      "title": "Hygienic & Safe",
+      "description": "We maintain strict hygiene standards — fresh towels, sterilised tools, and a clean environment for every client."
+    }
+  ],
+  "ctaBanner": {
+    "heading": "Ready for Your Transformation?",
+    "subheading": "Walk in or book ahead — we're ready when you are.",
+    "primaryCta": { "text": "Call Us Now", "href": "tel:+917276997855" },
+    "secondaryCta": { "text": "WhatsApp Us", "href": "https://wa.me/917276997855" }
+  }
+}
