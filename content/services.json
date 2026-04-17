@@ -10,28 +10,44 @@
       "emoji": "🧘",
       "services": [
         {
-          "name": "Swedish Full Body Massage",
-          "description": "A therapeutic full-body massage using warm oils to relieve muscle tension, reduce stress, and restore deep calm."
-        },
-        {
           "name": "Aromatherapy Massage",
-          "description": "Essential oil-infused massage tailored to your mood — relaxing, uplifting, or energising — for a holistic experience."
+          "description": "Aromatic essential oils meet soft, nurturing strokes to calm your senses, elevate your mood, and leave you in a state of complete serenity. A gentle, full-body ritual for deep relaxation and emotional balance."
         },
         {
-          "name": "Hot Stone Therapy",
-          "description": "Warm basalt stones melt away deep muscle tension while promoting circulation and profound relaxation."
+          "name": "Swedish Full Body Massage",
+          "description": "Rhythmic, flowing strokes and warm oil work together to improve circulation, soften muscle tension, and restore your body's natural vitality. Perfectly balanced — for glowing skin, better sleep, and a clear, relaxed mind."
         },
         {
           "name": "Deep Tissue Massage",
-          "description": "Firm-pressure technique targeting deeper muscle layers to release chronic tension and knots."
+          "description": "Firm, targeted pressure penetrates deep muscle layers to dissolve chronic tension, stubborn knots, and fatigue — using the skilled elbow technique for maximum relief. Ideal for serious muscle pain, post-workout recovery, and restored mobility."
         },
         {
-          "name": "Back & Shoulder Massage",
-          "description": "Focused pressure massage targeting the neck, back, and shoulders — ideal after a long week."
+          "name": "Balinese Massage",
+          "description": "An ancient Indonesian healing art that weaves together aromatic oil, acupressure, reflexology, and gentle stretching to awaken circulation and restore full-body harmony. Deeply therapeutic and utterly relaxing — a true whole-body experience."
         },
         {
-          "name": "Couple's Spa Ritual",
-          "description": "Enjoy a shared spa experience — side-by-side massages with your partner in a calming, private setting."
+          "name": "Hot Stone Massage",
+          "description": "Smooth heated basalt stones are placed on key body points to melt deep muscle tension, ease chronic pain, and improve circulation from within. Pure warmth-infused healing for your body and nervous system."
+        },
+        {
+          "name": "Thai Yoga Massage",
+          "description": "A traditional oil-free massage that uses skillful assisted stretching and rhythmic pressure to unlock flexibility, release muscle tension, and restore your body's full range of motion. Energising, therapeutic, and unlike any massage you've experienced before."
+        },
+        {
+          "name": "Abhyanga (Ayurvedic Oil Massage)",
+          "description": "Rooted in ancient Indian Ayurvedic wisdom, this full-body ritual uses warm herbal oils and rhythmic strokes to detoxify, nourish the skin, calm the nervous system, and restore inner balance. A deeply healing experience that leaves you glowing inside and out."
+        },
+        {
+          "name": "Couple's Massage",
+          "description": "Experience the joy of shared relaxation — side-by-side massages in a serene, private space where both of you unwind together. A beautiful way to reconnect, de-stress, and create a moment of pure calm with your partner."
+        },
+        {
+          "name": "Orchid Special Package I — Complete Radiance Ritual",
+          "description": "Our signature 3-hour head-to-toe journey: a luxurious Balinese massage to awaken your energy, followed by invigorating body scrub and polishing to reveal luminous skin, a nourishing herbal wrap, and a revitalising facial. Three hours of pure transformation."
+        },
+        {
+          "name": "Orchid Special Package II — Targeted Therapy Escape",
+          "description": "A focused 2-hour power session: a firm deep tissue massage to release stubborn knots and muscle pain, followed by a revitalising facial and a full-body express massage to seal in complete relaxation. Efficient, effective, and deeply rewarding."
         }
       ]
     },
