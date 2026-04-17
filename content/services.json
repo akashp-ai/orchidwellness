@@ -4,122 +4,6 @@
   "subheading": "From signature hair transformations to deeply restorative spa rituals — everything you need, under one roof.",
   "categories": [
     {
-      "id": "hair-women",
-      "name": "Hair — Women",
-      "icon": "Scissors",
-      "emoji": "✂️",
-      "services": [
-        {
-          "name": "Haircut & Blow Dry",
-          "description": "Precision cut tailored to your face shape, finished with a professional blow-dry for that salon-fresh bounce."
-        },
-        {
-          "name": "Hair Wash & Blow Dry",
-          "description": "Deep cleanse with a nourishing shampoo and conditioner, styled to perfection."
-        },
-        {
-          "name": "Hair Ironing / Curling",
-          "description": "Sleek straight looks or bouncy curls — styled with heat protection for a lasting finish."
-        },
-        {
-          "name": "Keratin Treatment",
-          "description": "Frizz-free, glossy, and manageable hair that lasts for months. Perfect for thick or unruly hair."
-        },
-        {
-          "name": "Smoothening / Rebonding",
-          "description": "Chemical straightening treatment for pin-straight, silky-smooth hair with long-lasting results."
-        }
-      ]
-    },
-    {
-      "id": "hair-colour",
-      "name": "Hair Colour",
-      "icon": "Palette",
-      "emoji": "🎨",
-      "services": [
-        {
-          "name": "Global Hair Colour",
-          "description": "Full head colour using salon-grade dyes. Available in natural shades, fashion colours, and everything in between."
-        },
-        {
-          "name": "Highlights / Lowlights",
-          "description": "Dimensional colour that adds depth, brightness, or contrast — foil, balayage, or ombre style."
-        },
-        {
-          "name": "Balayage",
-          "description": "Hand-painted colour technique for a natural sun-kissed look with effortless grow-out."
-        },
-        {
-          "name": "Root Touch-Up",
-          "description": "Quick and precise root application to keep your colour looking fresh between full sessions."
-        },
-        {
-          "name": "Ombre / Dip Dye",
-          "description": "Gradual colour transition from dark roots to lighter tips, customised to your preference."
-        }
-      ]
-    },
-    {
-      "id": "men-grooming",
-      "name": "Men's Grooming",
-      "icon": "Zap",
-      "emoji": "💈",
-      "services": [
-        {
-          "name": "Haircut & Styling",
-          "description": "Sharp, clean cuts — from classic to contemporary. Every cut is styled and finished with precision."
-        },
-        {
-          "name": "Beard Shaping & Trim",
-          "description": "Defined lines, even length, and a clean neckline. Your beard, at its most refined."
-        },
-        {
-          "name": "Hot Towel Shave",
-          "description": "Traditional straight-razor shave with hot towel and post-shave balm — the full barbershop experience."
-        },
-        {
-          "name": "Men's Facial",
-          "description": "Deep cleanse, scrub, and massage tailored for men's thicker skin — leaves you looking refreshed and glowing."
-        },
-        {
-          "name": "D-Tan & Cleanup",
-          "description": "Remove sun tan, open pores, and dull skin. Quick, effective, and suitable for all skin types."
-        },
-        {
-          "name": "Head Massage",
-          "description": "Relaxing scalp and shoulder massage using warm oil to melt away tension and boost circulation."
-        }
-      ]
-    },
-    {
-      "id": "facials-skin",
-      "name": "Facials & Skincare",
-      "icon": "Star",
-      "emoji": "✨",
-      "services": [
-        {
-          "name": "Classic Facial",
-          "description": "Cleanse, exfoliate, steam, extract, and moisturise — the essential facial for healthy, balanced skin."
-        },
-        {
-          "name": "Gold Facial",
-          "description": "Luxury gold-infused facial to boost radiance, improve elasticity, and leave skin with a luminous glow."
-        },
-        {
-          "name": "Anti-Tan Facial",
-          "description": "Targeted de-tanning treatment to even skin tone and restore natural brightness after sun exposure."
-        },
-        {
-          "name": "Bridal Glow Facial",
-          "description": "Multi-step brightening and hydration ritual designed to give brides a radiant, camera-ready complexion."
-        },
-        {
-          "name": "Skin Cleanup",
-          "description": "A quick yet effective deep-pore cleanse — perfect for maintaining skin between full facial sessions."
-        }
-      ]
-    },
-    {
       "id": "massage-therapies",
       "name": "Massage Therapies",
       "icon": "Leaf",
@@ -180,6 +64,122 @@
       ]
     },
     {
+      "id": "hair-women",
+      "name": "Hair — Women",
+      "icon": "Scissors",
+      "emoji": "✂️",
+      "services": [
+        {
+          "name": "Haircut & Blow Dry",
+          "description": "Precision cut tailored to your face shape, finished with a professional blow-dry for that salon-fresh bounce."
+        },
+        {
+          "name": "Hair Wash & Blow Dry",
+          "description": "Deep cleanse with a nourishing shampoo and conditioner, styled to perfection."
+        },
+        {
+          "name": "Hair Ironing / Curling",
+          "description": "Sleek straight looks or bouncy curls — styled with heat protection for a lasting finish."
+        },
+        {
+          "name": "Keratin Treatment",
+          "description": "Frizz-free, glossy, and manageable hair that lasts for months. Perfect for thick or unruly hair."
+        },
+        {
+          "name": "Smoothening / Rebonding",
+          "description": "Chemical straightening treatment for pin-straight, silky-smooth hair with long-lasting results."
+        }
+      ]
+    },
+    {
+      "id": "hair-colour",
+      "name": "Hair Colour",
+      "icon": "Palette",
+      "emoji": "🎨",
+      "services": [
+        {
+          "name": "Global Hair Colour",
+          "description": "Full head colour using salon-grade dyes. Available in natural shades, fashion colours, and everything in between."
+        },
+        {
+          "name": "Highlights / Lowlights",
+          "description": "Dimensional colour that adds depth, brightness, or contrast — foil, balayage, or ombre style."
+        },
+        {
+          "name": "Balayage",
+          "description": "Hand-painted colour technique for a natural sun-kissed look with effortless grow-out."
+        },
+        {
+          "name": "Root Touch-Up",
+          "description": "Quick and precise root application to keep your colour looking fresh between full sessions."
+        },
+        {
+          "name": "Ombre / Dip Dye",
+          "description": "Gradual colour transition from dark roots to lighter tips, customised to your preference."
+        }
+      ]
+    },
+    {
+      "id": "facials-skin",
+      "name": "Facials & Skincare",
+      "icon": "Star",
+      "emoji": "✨",
+      "services": [
+        {
+          "name": "Classic Facial",
+          "description": "Cleanse, exfoliate, steam, extract, and moisturise — the essential facial for healthy, balanced skin."
+        },
+        {
+          "name": "Gold Facial",
+          "description": "Luxury gold-infused facial to boost radiance, improve elasticity, and leave skin with a luminous glow."
+        },
+        {
+          "name": "Anti-Tan Facial",
+          "description": "Targeted de-tanning treatment to even skin tone and restore natural brightness after sun exposure."
+        },
+        {
+          "name": "Bridal Glow Facial",
+          "description": "Multi-step brightening and hydration ritual designed to give brides a radiant, camera-ready complexion."
+        },
+        {
+          "name": "Skin Cleanup",
+          "description": "A quick yet effective deep-pore cleanse — perfect for maintaining skin between full facial sessions."
+        }
+      ]
+    },
+    {
+      "id": "men-grooming",
+      "name": "Men's Grooming",
+      "icon": "Zap",
+      "emoji": "💈",
+      "services": [
+        {
+          "name": "Haircut & Styling",
+          "description": "Sharp, clean cuts — from classic to contemporary. Every cut is styled and finished with precision."
+        },
+        {
+          "name": "Beard Shaping & Trim",
+          "description": "Defined lines, even length, and a clean neckline. Your beard, at its most refined."
+        },
+        {
+          "name": "Hot Towel Shave",
+          "description": "Traditional straight-razor shave with hot towel and post-shave balm — the full barbershop experience."
+        },
+        {
+          "name": "Men's Facial",
+          "description": "Deep cleanse, scrub, and massage tailored for men's thicker skin — leaves you looking refreshed and glowing."
+        },
+        {
+          "name": "D-Tan & Cleanup",
+          "description": "Remove sun tan, open pores, and dull skin. Quick, effective, and suitable for all skin types."
+        },
+        {
+          "name": "Head Massage",
+          "description": "Relaxing scalp and shoulder massage using warm oil to melt away tension and boost circulation."
+        }
+      ]
+    },
+    {
       "id": "hair-spa",
       "name": "Hair Spa & Rituals",
       "icon": "Sparkles",
@@ -224,34 +224,6 @@
         {
           "name": "Spa Pedicure",
           "description": "Upgraded pedicure with an extended foot soak, scrub, mask, and massage — pure luxury for tired feet."
-        }
-      ]
-    },
-    {
-      "id": "bridal",
-      "name": "Bridal & Party",
-      "icon": "Crown",
-      "emoji": "👑",
-      "services": [
-        {
-          "name": "Bridal Makeup",
-          "description": "Full bridal look created with premium cosmetics. Includes base prep, eye look, lip, and dupatta setting."
-        },
-        {
-          "name": "Party Makeup",
-          "description": "Glamorous, occasion-ready makeup that photographs beautifully and lasts through the event."
-        },
-        {
-          "name": "Saree Draping",
-          "description": "Professional saree draping in a style of your choice — elegant, snug, and ready for any occasion."
-        },
-        {
-          "name": "Bridal Hair Styling",
-          "description": "Elaborate bridal updo or half-up style with flowers, accessories, and finishing spray for all-day hold."
-        },
-        {
-          "name": "Pre-Bridal Package",
-          "description": "Full pre-bridal prep — facials, waxing, hair ritual, and glow treatments. Ask us for a custom quote."
         }
       ]
     },

@@ -8,7 +8,7 @@
     "_note": "Thin banner at the very top of the page. Set enabled:false to hide it.",
     "enabled": true,
     "badge": "Welcome Offer",
-    "text": "✨ New clients enjoy 20% off their first visit — walk in or call to book",
+    "text": "✨ New clients enjoy 10% off their first visit — walk in or call to book",
     "ctaText": "Book Now",
     "ctaHref": "#contact"
   },
@@ -19,8 +19,8 @@
       "enabled": true,
       "badge": "New Clients",
       "title": "First Visit Offer",
-      "subtitle": "20% off your first service",
-      "description": "Visiting Orchid for the first time? We'd love to welcome you with 20% off any single service — haircut, facial, spa, colour, or bridal. No exclusions, no minimum spend.",
+      "subtitle": "10% off your first service",
+      "description": "Visiting Orchid for the first time? We'd love to welcome you with 10% off any single service — haircut, facial, spa, colour, or bridal. No exclusions, no minimum spend.",
       "validity": "For first-time clients only. One per person.",
       "ctaText": "Claim This Offer",
       "ctaHref": "#contact"
