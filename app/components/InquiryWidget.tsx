@@ -197,7 +197,7 @@ export default function InquiryWidget() {
                 <textarea
                   value={form.query}
                   onChange={(e) => setForm({ ...form, query: e.target.value })}
-                  placeholder="e.g. I'd like to book a bridal package for next Saturday..."
+                  placeholder="e.g. I'd like to book a massage session for next Saturday..."
                   rows={3}
                   className="w-full px-4 py-3 rounded-xl border border-cream-300 bg-cream-50 text-charcoal-800 text-sm placeholder:text-charcoal-300 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition resize-none"
                   disabled={step === "loading"}
