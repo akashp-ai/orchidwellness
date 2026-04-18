@@ -8,7 +8,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Footer() {
   const { t } = useLanguage();
-  const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Salon!%20I%20would%20like%20to%20book%20an%20appointment.`;
+  const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20%26%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`;
 
   const navLinks = [
     { key: "nav.home",     href: "#home"     },
@@ -47,7 +47,7 @@ export default function Footer() {
                   className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1877F2] flex items-center justify-center transition-all hover:scale-110" aria-label="Facebook">
                   <FacebookIcon size={15} />
                 </a>
-                <a href={`https://wa.me/${site.contact.whatsapp}`} target="_blank" rel="noopener noreferrer"
+                <a href={`https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20%26%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`} target="_blank" rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition-all hover:scale-110" aria-label="WhatsApp">
                   <WhatsAppIcon size={15} />
                 </a>

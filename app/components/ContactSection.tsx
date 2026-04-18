@@ -19,7 +19,7 @@ export default function ContactSection() {
     return () => observer.disconnect();
   }, []);
 
-  const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Salon!%20I%20would%20like%20to%20book%20an%20appointment.`;
+  const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20%26%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`;
 
   return (
     <section id="contact" className="py-12 lg:py-16 bg-cream-100">
