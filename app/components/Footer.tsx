@@ -54,7 +54,7 @@ export default function Footer() {
                 {site.social.justdial && (
                   <a href={site.social.justdial} target="_blank" rel="noopener noreferrer"
                     className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center transition-all hover:scale-110"
-                    onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#FF6600")}
+                    onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#F26522")}
                     onMouseLeave={e => (e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.1)")}
                     aria-label="JustDial">
                     <JustDialIcon size={16} />
@@ -103,7 +103,7 @@ export default function Footer() {
                 <a href={waLink} target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 text-charcoal-400 hover:text-[#25D366] text-sm transition-colors">
                   <WhatsAppIcon size={14} />
-                  WhatsApp Us
+                  {t("common.whatsapp")}
                 </a>
               </li>
               <li className="flex items-start gap-2 text-charcoal-400 text-sm">

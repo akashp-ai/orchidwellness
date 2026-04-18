@@ -52,7 +52,7 @@ export function WhatsAppIcon({ size = 20, className = "" }: { size?: number; cla
 /**
  * JustDial — official JD brand icon.
  * Orange background (#F26522) with bold white "JD" lettering.
- * Matches the JustDial app icon style.
+ * Uses textAnchor="middle" for correct centering at all rendered sizes.
  */
 export function JustDialIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
   return (
@@ -64,17 +64,17 @@ export function JustDialIcon({ size = 20, className = "" }: { size?: number; cla
       className={className}
       aria-hidden="true"
     >
-      {/* Orange rounded-square background — JD brand colour */}
-      <rect width="40" height="40" rx="9" fill="#F26522" />
-      {/* "J" glyph */}
+      <rect width="40" height="40" rx="8" fill="#F26522" />
       <text
-        x="10"
-        y="28"
+        x="20"
+        y="27"
+        textAnchor="middle"
+        dominantBaseline="auto"
         fill="white"
-        fontSize="20"
+        fontSize="19"
         fontWeight="900"
-        fontFamily="Arial Black, Arial, Helvetica, sans-serif"
-        letterSpacing="-1"
+        fontFamily="Arial Black, Arial, sans-serif"
+        letterSpacing="0"
       >JD</text>
     </svg>
   );

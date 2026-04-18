@@ -32,7 +32,7 @@ export default function IntroBanner() {
             <span className="inline-block text-rose-500 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
               {t("intro.eyebrow")}
             </span>
-            <h2 className="font-serif text-5xl md:text-6xl font-semibold text-charcoal-900 leading-tight mb-6">
+            <h2 className="font-serif text-4xl md:text-5xl font-semibold text-charcoal-900 leading-tight mb-6">
               {home.intro.heading.split("\n").map((line, i) => (
                 <span key={i} className="block">
                   {i === 1 ? (

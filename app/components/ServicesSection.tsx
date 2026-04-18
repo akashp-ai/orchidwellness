@@ -47,7 +47,7 @@ export default function ServicesSection() {
             <span className="inline-block text-rose-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
               {t("services.eyebrow")}
             </span>
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold text-charcoal-900 mb-3">
+            <h2 className="font-serif text-4xl md:text-5xl font-semibold text-charcoal-900 mb-3">
               {services.heading}
             </h2>
             <p className="text-charcoal-500 max-w-xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">

@@ -41,7 +41,7 @@ export default function OffersSection() {
             <p className="text-charcoal-500 max-w-xl mx-auto text-sm md:text-base">
               {offers.subheading}
             </p>
-            <div className="divider-rose mt-5" />
+            <div className="divider-gold mt-5" />
           </div>
 
           {/* Offer cards */}
@@ -98,7 +98,7 @@ export default function OffersSection() {
                             ?.scrollIntoView({ behavior: "smooth" });
                         }
                       }}
-                      className="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white font-medium px-5 py-2.5 rounded-xl text-sm transition-colors"
+                      className="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white font-medium px-5 py-2.5 rounded-full text-sm transition-colors"
                     >
                       {offer.ctaText}
                       <ArrowRight size={14} />

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { X, Send, MessageSquare, CheckCircle, Loader2 } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 type Step = "idle" | "open" | "loading" | "success" | "error";
 
@@ -10,6 +11,7 @@ export default function InquiryWidget() {
   const [form, setForm] = useState({ name: "", phone: "", query: "" });
   const [error, setError] = useState("");
   const nameRef = useRef<HTMLInputElement>(null);
+  const { t } = useLanguage();
 
   // Focus name field when opened
   useEffect(() => {
@@ -124,19 +126,19 @@ export default function InquiryWidget() {
             <div className="w-2.5 h-2.5 rounded-full bg-green-400 shadow-sm shadow-green-400/50 flex-shrink-0" />
             <div>
               <div className="text-white font-serif font-semibold text-base">
-                Ask Us Anything
+                {t("inquiry.title")}
               </div>
               <div className="text-white/70 text-xs mt-0.5">
-                We&apos;ll get back to you shortly
+                {t("inquiry.subtitle")}
               </div>
             </div>
           </div>
           <button
             onClick={() => setStep("idle")}
-            className="w-8 h-8 rounded-full bg-white/15 hover:bg-white/30 flex items-center justify-center transition-colors flex-shrink-0"
+            className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/30 flex items-center justify-center transition-colors flex-shrink-0"
             aria-label="Close"
           >
-            <X size={16} className="text-white" />
+            <X size={18} className="text-white" />
           </button>
         </div>
 
@@ -146,10 +148,10 @@ export default function InquiryWidget() {
             <div className="py-6 text-center">
               <CheckCircle size={48} className="text-green-500 mx-auto mb-3" />
               <h3 className="font-serif text-lg font-semibold text-charcoal-900 mb-2">
-                Thank You!
+                {t("inquiry.successTitle")}
               </h3>
               <p className="text-charcoal-500 text-sm leading-relaxed">
-                Our team will reach out to you soon. We look forward to welcoming you at Orchid!
+                {t("inquiry.successText")}
               </p>
             </div>
           ) : (
@@ -218,18 +220,18 @@ export default function InquiryWidget() {
                 {step === "loading" ? (
                   <>
                     <Loader2 size={16} className="animate-spin" />
-                    Sending...
+                    {t("inquiry.sending")}
                   </>
                 ) : (
                   <>
                     <Send size={16} />
-                    Send Inquiry
+                    {t("inquiry.sendBtn")}
                   </>
                 )}
               </button>
 
               <p className="text-center text-[11px] text-charcoal-400 mt-3">
-                We reply within business hours · No spam, ever.
+                {t("inquiry.disclaimer")}
               </p>
             </form>
           )}
