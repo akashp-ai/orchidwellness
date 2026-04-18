@@ -22,7 +22,7 @@ function WhatsAppIcon({ size = 20 }: { size?: number }) {
 
 export default function MobileCTA() {
   const { t } = useLanguage();
-  const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20%26%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`;
+  const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20and%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`;
   const mapsLink = site.address.googleMapsUrl;
 
   return (

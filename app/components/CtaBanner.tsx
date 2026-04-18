@@ -7,7 +7,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 export default function CtaBanner() {
   const { t } = useLanguage();
-  const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20%26%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`;
+  const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20and%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`;
 
   return (
     <section className="py-16 bg-gradient-to-r from-rose-500 via-rose-500 to-gold-500 relative overflow-hidden">

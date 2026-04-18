@@ -149,7 +149,7 @@ export default function ServicesSection() {
                 {t("common.bookService")}
               </a>
               <a
-                href={`https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20%26%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`}
+                href={`https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Saloon%20and%20Spa%2C%20I%20would%20like%20to%20make%20an%20appointment.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-green-500 text-green-600 hover:bg-green-50 font-semibold px-8 py-4 rounded-full text-sm transition-all duration-200"
