@@ -41,7 +41,7 @@ export default function FounderSection() {
       <div ref={ref} className="reveal grid lg:grid-cols-2">
 
         {/* ── Left: image panel (reduced height) ── */}
-        <div className="relative h-[200px] sm:h-[260px] lg:h-auto lg:min-h-[380px] bg-gradient-to-br from-rose-200 to-rose-100">
+        <div className="relative h-[300px] sm:h-[360px] lg:h-auto lg:min-h-[500px] bg-gradient-to-br from-rose-200 to-rose-100">
           <Image
             src={assetUrl(founder.image.src)}
             alt={founder.image.alt}
