@@ -11,43 +11,43 @@
       "services": [
         {
           "name": "Aromatherapy Massage",
-          "description": "Aromatic essential oils meet soft, nurturing strokes to calm your senses, elevate your mood, and leave you in a state of complete serenity. A gentle, full-body ritual for deep relaxation and emotional balance."
+          "description": "Aromatic essential oils blend with soft, nurturing strokes to calm your senses, elevate your mood, and soothe your nervous system. A gentle full-body ritual for deep relaxation and emotional balance."
         },
         {
           "name": "Swedish Full Body Massage",
-          "description": "Rhythmic, flowing strokes and warm oil work together to improve circulation, soften muscle tension, and restore your body's natural vitality. Perfectly balanced — for glowing skin, better sleep, and a clear, relaxed mind."
+          "description": "Rhythmic strokes and warm oil improve circulation, soften muscle tension, and restore your body's natural vitality. Perfect for glowing skin, better sleep, and a clear, relaxed mind."
         },
         {
           "name": "Deep Tissue Massage",
-          "description": "Firm, targeted pressure penetrates deep muscle layers to dissolve chronic tension, stubborn knots, and fatigue — using the skilled elbow technique for maximum relief. Ideal for serious muscle pain, post-workout recovery, and restored mobility."
+          "description": "Firm, targeted pressure penetrates deep muscle layers to dissolve chronic tension and stubborn knots using the skilled elbow technique. Ideal for muscle pain, post-workout recovery, and restored mobility."
         },
         {
           "name": "Balinese Massage",
-          "description": "An ancient Indonesian healing art that weaves together aromatic oil, acupressure, reflexology, and gentle stretching to awaken circulation and restore full-body harmony. Deeply therapeutic and utterly relaxing — a true whole-body experience."
+          "description": "An Indonesian healing art combining aromatic oil, acupressure, reflexology, and gentle stretching to awaken circulation and restore full-body harmony. Deeply therapeutic, utterly relaxing — a true whole-body experience."
         },
         {
           "name": "Hot Stone Massage",
-          "description": "Smooth heated basalt stones are placed on key body points to melt deep muscle tension, ease chronic pain, and improve circulation from within. Pure warmth-infused healing for your body and nervous system."
+          "description": "Smooth heated basalt stones placed on key body points melt deep muscle tension, ease chronic pain, and improve circulation. Pure warmth-infused healing for your body and nervous system."
         },
         {
           "name": "Thai Yoga Massage",
-          "description": "A traditional oil-free massage that uses skillful assisted stretching and rhythmic pressure to unlock flexibility, release muscle tension, and restore your body's full range of motion. Energising, therapeutic, and unlike any massage you've experienced before."
+          "description": "A traditional oil-free massage using assisted stretching and rhythmic pressure to unlock flexibility and release muscle tension. Energising, therapeutic, and unlike any massage you've experienced before."
         },
         {
           "name": "Abhyanga (Ayurvedic Oil Massage)",
-          "description": "Rooted in ancient Indian Ayurvedic wisdom, this full-body ritual uses warm herbal oils and rhythmic strokes to detoxify, nourish the skin, calm the nervous system, and restore inner balance. A deeply healing experience that leaves you glowing inside and out."
+          "description": "Rooted in Ayurvedic wisdom, warm herbal oils and rhythmic strokes detoxify, nourish the skin, calm the nervous system, and restore inner balance. A deeply healing ritual that leaves you glowing inside and out."
         },
         {
           "name": "Couple's Massage",
-          "description": "Experience the joy of shared relaxation — side-by-side massages in a serene, private space where both of you unwind together. A beautiful way to reconnect, de-stress, and create a moment of pure calm with your partner."
+          "description": "Side-by-side massages in a serene, private space — a shared experience of relaxation and reconnection for two. A beautiful way to de-stress and create a moment of pure calm together."
         },
         {
           "name": "Orchid Special Package I — Complete Radiance Ritual",
-          "description": "Our signature 3-hour head-to-toe journey: a luxurious Balinese massage to awaken your energy, followed by invigorating body scrub and polishing to reveal luminous skin, a nourishing herbal wrap, and a revitalising facial. Three hours of pure transformation."
+          "description": "Our signature 3-hour ritual: Balinese massage, invigorating body scrub and polishing, nourishing herbal wrap, and a revitalising facial. Three hours of pure, head-to-toe transformation."
         },
         {
           "name": "Orchid Special Package II — Targeted Therapy Escape",
-          "description": "A focused 2-hour power session: a firm deep tissue massage to release stubborn knots and muscle pain, followed by a revitalising facial and a full-body express massage to seal in complete relaxation. Efficient, effective, and deeply rewarding."
+          "description": "A focused 2-hour session: deep tissue massage to release stubborn knots, followed by a revitalising facial and a full-body express massage. Efficient, effective, and deeply rewarding."
         }
       ]
     },
@@ -158,8 +158,12 @@
           "description": "Multi-step brightening and hydration ritual designed to deliver a luminous, camera-ready complexion for any occasion."
         },
         {
-          "name": "Skin Cleanup",
-          "description": "A quick yet effective deep-pore cleanse — perfect for maintaining skin between full facial sessions."
+          "name": "Purifying Facial",
+          "description": "A deep-cleansing ritual that draws out toxins and dead skin cells, balances oil production, and refines skin texture. Leaves you with a visibly clear, hydrated, and radiant complexion."
+        },
+        {
+          "name": "Youth Renewal Facial",
+          "description": "A potent anti-ageing treatment powered by pentapeptides that reduces fine lines and wrinkles, delivers deep hydration and plumping, and boosts cellular turnover. Visibly younger-looking skin, every session."
         }
       ]
     },
