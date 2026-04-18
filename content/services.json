@@ -11,43 +11,43 @@
       "services": [
         {
           "name": "Aromatherapy Massage",
-          "description": "Aromatic essential oils blend with soft, nurturing strokes to calm your senses, elevate your mood, and soothe your nervous system. A gentle full-body ritual for deep relaxation and emotional balance."
+          "description": "Soothing essential oils and soft strokes calm the senses, lift mood, and ease the nervous system into full relaxation."
         },
         {
           "name": "Swedish Full Body Massage",
-          "description": "Rhythmic strokes and warm oil improve circulation, soften muscle tension, and restore your body's natural vitality. Perfect for glowing skin, better sleep, and a clear, relaxed mind."
+          "description": "Warm-oil rhythmic strokes boost circulation, ease muscle tension, and leave you with glowing skin and a rested mind."
         },
         {
           "name": "Deep Tissue Massage",
-          "description": "Firm, targeted pressure penetrates deep muscle layers to dissolve chronic tension and stubborn knots using the skilled elbow technique. Ideal for muscle pain, post-workout recovery, and restored mobility."
+          "description": "Firm elbow-technique pressure targets deep muscle layers to dissolve chronic knots, relieve pain, and restore mobility."
         },
         {
           "name": "Balinese Massage",
-          "description": "An Indonesian healing art combining aromatic oil, acupressure, reflexology, and gentle stretching to awaken circulation and restore full-body harmony. Deeply therapeutic, utterly relaxing — a true whole-body experience."
+          "description": "Acupressure, reflexology, aromatic oil, and gentle stretching combined to boost circulation and restore complete body harmony."
         },
         {
           "name": "Hot Stone Massage",
-          "description": "Smooth heated basalt stones placed on key body points melt deep muscle tension, ease chronic pain, and improve circulation. Pure warmth-infused healing for your body and nervous system."
+          "description": "Heated basalt stones melt deep muscle tension, ease chronic pain, and improve blood circulation from within."
         },
         {
           "name": "Thai Yoga Massage",
-          "description": "A traditional oil-free massage using assisted stretching and rhythmic pressure to unlock flexibility and release muscle tension. Energising, therapeutic, and unlike any massage you've experienced before."
+          "description": "Oil-free assisted stretching and rhythmic pressure to unlock flexibility, ease back pain, and restore full range of motion."
         },
         {
           "name": "Abhyanga (Ayurvedic Oil Massage)",
-          "description": "Rooted in Ayurvedic wisdom, warm herbal oils and rhythmic strokes detoxify, nourish the skin, calm the nervous system, and restore inner balance. A deeply healing ritual that leaves you glowing inside and out."
+          "description": "Warm herbal oils and Ayurvedic strokes detoxify the body, nourish the skin, and restore inner calm and balance."
         },
         {
           "name": "Couple's Massage",
-          "description": "Side-by-side massages in a serene, private space — a shared experience of relaxation and reconnection for two. A beautiful way to de-stress and create a moment of pure calm together."
+          "description": "Side-by-side massages in a serene private space — the perfect shared experience to relax and reconnect together."
         },
         {
           "name": "Orchid Special Package I — Complete Radiance Ritual",
-          "description": "Our signature 3-hour ritual: Balinese massage, invigorating body scrub and polishing, nourishing herbal wrap, and a revitalising facial. Three hours of pure, head-to-toe transformation."
+          "description": "3 hrs: Balinese massage + body scrub + polishing + herbal wrap + facial — a full head-to-toe transformation."
         },
         {
           "name": "Orchid Special Package II — Targeted Therapy Escape",
-          "description": "A focused 2-hour session: deep tissue massage to release stubborn knots, followed by a revitalising facial and a full-body express massage. Efficient, effective, and deeply rewarding."
+          "description": "2 hrs: Deep tissue massage + revitalising facial + express full-body massage — focused, effective, deeply rewarding."
         }
       ]
     },
