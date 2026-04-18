@@ -139,7 +139,7 @@ export default function GallerySection() {
   const allShorts = videos.length > 0 && videos.every((v) => v.isShort);
 
   return (
-    <section id="gallery" className="py-16 lg:py-28 bg-white">
+    <section id="gallery" className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="reveal">
 

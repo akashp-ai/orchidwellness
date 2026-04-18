@@ -51,13 +51,13 @@ export default function Hero() {
       />
 
       {/* ── Main content ── */}
-      <div ref={ref} className="reveal relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 text-left pt-20 md:pt-24">
+      <div ref={ref} className="reveal relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-12 text-left pt-20 md:pt-24">
 
         {/* Rating badge */}
-        <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
+        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
           <div className="flex gap-0.5">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} size={12} className="fill-gold-400 text-gold-400" />
+              <Star key={i} size={11} className="fill-gold-400 text-gold-400" />
             ))}
           </div>
           <span className="text-white/90 text-xs font-medium tracking-wide">
@@ -65,8 +65,8 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* Headline */}
-        <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-[6.5rem] font-bold text-white leading-[1.05] mb-6 max-w-3xl">
+        {/* Headline — safe on all screen widths */}
+        <h1 className="font-serif text-[2.4rem] leading-[1.1] sm:text-5xl md:text-7xl lg:text-[6rem] font-bold text-white mb-5 max-w-3xl">
           {lines.map((line, i) => (
             <span key={i} className="block">
               {i === 1 ? (
@@ -79,12 +79,12 @@ export default function Hero() {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-white/75 text-base sm:text-lg md:text-xl max-w-xl leading-relaxed mb-10 font-light">
+        <p className="text-white/75 text-sm sm:text-base md:text-lg max-w-sm sm:max-w-md md:max-w-xl leading-relaxed mb-8 font-light">
           {home.hero.subheadline}
         </p>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-start gap-4">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
           <a
             href={home.hero.primaryCta.href}
             onClick={(e) => {
@@ -92,7 +92,7 @@ export default function Hero() {
               document.querySelector(home.hero.primaryCta.href)
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-4 rounded-full text-base transition-all duration-200 hover:scale-105 shadow-lg shadow-rose-900/40"
+            className="inline-flex items-center justify-center gap-2 bg-rose-500 hover:bg-rose-600 text-white font-semibold px-7 py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 shadow-lg shadow-rose-900/40"
           >
             {t("common.bookAppointment")}
           </a>
@@ -103,16 +103,16 @@ export default function Hero() {
               document.querySelector(home.hero.secondaryCta.href)
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full text-base transition-all duration-200 hover:bg-white/10 backdrop-blur-sm"
+            className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white px-7 py-3.5 rounded-full text-sm sm:text-base transition-all duration-200 hover:bg-white/10"
           >
             {t("common.exploreServices")}
           </a>
         </div>
 
         {/* Social proof row */}
-        <div className="mt-12 flex flex-wrap items-center justify-start gap-6 text-white/60 text-sm">
+        <div className="mt-8 flex flex-wrap items-center justify-start gap-4 sm:gap-6 text-white/60 text-xs sm:text-sm">
           <div className="flex items-center gap-1.5">
-            <Star size={14} className="fill-gold-400 text-gold-400" />
+            <Star size={13} className="fill-gold-400 text-gold-400" />
             <span>
               <strong className="text-white">{site.ratings.score}</strong>{" "}
               {t("hero.ratingLabel")}

@@ -22,12 +22,12 @@ export default function ContactSection() {
   const waLink = `https://wa.me/${site.contact.whatsapp}?text=Hi%20Orchid%20Salon!%20I%20would%20like%20to%20book%20an%20appointment.`;
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-cream-100">
+    <section id="contact" className="py-16 lg:py-20 bg-cream-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div ref={ref} className="reveal">
 
           {/* Header */}
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <span className="inline-block text-rose-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
               {t("contact.eyebrow")}
             </span>
@@ -198,7 +198,7 @@ export default function ContactSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-white px-4 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
-                        style={{ backgroundColor: "#FF6600" }}
+                        style={{ backgroundColor: "#F26522" }}
                       >
                         <JustDialIcon size={15} className="text-white" />
                         JustDial

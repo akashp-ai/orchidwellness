@@ -50,35 +50,32 @@ export function WhatsAppIcon({ size = 20, className = "" }: { size?: number; cla
 }
 
 /**
- * JustDial — stylised JD mark.
- * Use className="text-white" on orange backgrounds,
- * or className="text-[#FF6600]" on light backgrounds.
+ * JustDial — official JD brand icon.
+ * Orange background (#F26522) with bold white "JD" lettering.
+ * Matches the JustDial app icon style.
  */
 export function JustDialIcon({ size = 20, className = "" }: { size?: number; className?: string }) {
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 24 24"
-      fill="currentColor"
+      viewBox="0 0 40 40"
+      fill="none"
       className={className}
       aria-hidden="true"
     >
-      {/* Rounded square background — fills currentColor */}
-      <rect width="24" height="24" rx="5" />
-      {/* "JD" wordmark in white */}
+      {/* Orange rounded-square background — JD brand colour */}
+      <rect width="40" height="40" rx="9" fill="#F26522" />
+      {/* "J" glyph */}
       <text
-        x="12"
-        y="16.5"
-        textAnchor="middle"
+        x="10"
+        y="28"
         fill="white"
-        fontSize="9.5"
-        fontWeight="800"
-        fontFamily="Arial, Helvetica, sans-serif"
-        letterSpacing="0.5"
-      >
-        JD
-      </text>
+        fontSize="20"
+        fontWeight="900"
+        fontFamily="Arial Black, Arial, Helvetica, sans-serif"
+        letterSpacing="-1"
+      >JD</text>
     </svg>
   );
 }

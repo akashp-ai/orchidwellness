@@ -38,7 +38,7 @@ export default function Testimonials() {
   const review = reviews.reviews[active];
 
   return (
-    <section id="reviews" className="py-20 lg:py-28 bg-gradient-to-br from-rose-900 via-rose-800 to-[#3A0A24] relative overflow-hidden">
+    <section id="reviews" className="py-16 lg:py-20 bg-gradient-to-br from-rose-900 via-rose-800 to-[#3A0A24] relative overflow-hidden">
       {/* Decorative ambient glows */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-white/5 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gold-400/8 translate-x-1/4 translate-y-1/4 pointer-events-none" />
@@ -153,7 +153,7 @@ export default function Testimonials() {
                 href={site.social.justdial}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-medium px-5 py-2.5 rounded-full text-sm transition-colors"
+                className="inline-flex items-center gap-2 text-white font-medium px-5 py-2.5 rounded-full text-sm transition-opacity hover:opacity-90" style={{ backgroundColor: "#F26522" }}
               >
                 <JustDialIcon size={16} className="text-white" />
                 {t("reviews.justdialBtn")}

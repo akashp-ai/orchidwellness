@@ -23,9 +23,9 @@ export default function IntroBanner() {
   }, []);
 
   return (
-    <section id="intro" className="bg-cream-100 py-20 lg:py-28">
+    <section id="intro" className="bg-cream-100 py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div ref={ref} className="reveal grid lg:grid-cols-2 gap-16 items-center">
+        <div ref={ref} className="reveal grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
           {/* Left: Text */}
           <div>
