@@ -181,7 +181,7 @@ export default function ContactSection() {
                     {site.social.googleReviews && (
                       <a href={site.social.googleReviews} target="_blank" rel="noopener noreferrer"
                         className="flex items-center gap-1.5 bg-white border border-gray-200 text-charcoal-700 px-3 py-1.5 rounded-full text-xs font-medium hover:bg-gray-50 transition-colors shadow-sm">
-                        <GoogleIcon size={13} /> Google Reviews
+                        <GoogleIcon size={13} /> Google
                         <ExternalLink size={10} className="opacity-40" />
                       </a>
                     )}
