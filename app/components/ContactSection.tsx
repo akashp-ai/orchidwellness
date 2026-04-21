@@ -114,8 +114,7 @@ export default function ContactSection() {
                       <p className="text-charcoal-500 text-xs leading-relaxed">
                         {site.address.line1},<br />
                         {site.address.line2},<br />
-                        {site.address.area}, {site.address.city}<br />
-                        {site.address.state} — {site.address.pin}
+                        {site.address.city} — {site.address.pin}
                       </p>
                       <a
                         href={site.address.googleMapsUrl}
