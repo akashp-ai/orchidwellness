@@ -37,3 +37,13 @@ next-env.d.ts
 
 # Inquiry data (contains visitor names/phones — keep private)
 /data/inquiries.txt
+
+# Source photos — not needed in repo (website uses /public/media/)
+/Photos/
+
+# Backup content files
+/content/_backups/
+
+# Local build artifacts
+/orchidwellness/
+/out/
