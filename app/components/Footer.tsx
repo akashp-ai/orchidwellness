@@ -24,10 +24,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-10 pb-5">
 
         {/* ── Main grid: Brand | Nav | Contact + Hours ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
 
-          {/* Brand — full width on mobile, 1 col on md+ */}
-          <div className="col-span-2 md:col-span-1">
+          {/* Brand — full width on mobile + tablet, 1 col on lg+ */}
+          <div className="col-span-2 lg:col-span-1">
             <div className="mb-3">
               <Logo variant="footer" showTagline />
             </div>

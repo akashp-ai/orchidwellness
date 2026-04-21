@@ -244,3 +244,24 @@ section { overflow-x: hidden; max-width: 100vw; }
   .safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 16px); }
   .safe-top    { padding-top: max(env(safe-area-inset-top), 0px); }
 }
+
+/* ─── Tablet-specific improvements (768px – 1023px) ─── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Slightly larger tap targets on tablet */
+  a, button { min-height: 40px; }
+
+  /* Give headings a bit more breathing room on tablets */
+  h2 { line-height: 1.15; }
+
+  /* Ensure images inside grid cells don't overflow */
+  img { max-width: 100%; height: auto; }
+}
+
+/* ─── Founder photo — never cut the face ─────────────── */
+/* object-[center_15%] keeps face visible at all aspect ratios */
+.founder-photo {
+  object-position: center 15%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

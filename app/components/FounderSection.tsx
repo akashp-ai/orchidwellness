@@ -38,15 +38,15 @@ export default function FounderSection() {
       </div>
 
       {/* ── Two-column split ── */}
-      <div ref={ref} className="reveal grid lg:grid-cols-2">
+      <div ref={ref} className="reveal grid md:grid-cols-2">
 
-        {/* ── Left: image panel (reduced height) ── */}
-        <div className="relative h-[300px] sm:h-[360px] lg:h-auto lg:min-h-[500px] bg-gradient-to-br from-rose-200 to-rose-100">
+        {/* ── Left: image panel ── */}
+        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[480px] lg:min-h-[540px] bg-gradient-to-br from-rose-200 to-rose-100">
           <Image
             src={assetUrl(founder.image.src)}
             alt={founder.image.alt}
             fill
-            className="object-cover object-top"
+            className="object-cover object-[center_15%]"
             unoptimized
             loading="lazy"
             onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
