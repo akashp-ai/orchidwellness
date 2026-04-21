@@ -112,6 +112,7 @@ export default function ContactSection() {
                         {t("contact.addressLabel")}
                       </div>
                       <p className="text-charcoal-500 text-xs leading-relaxed">
+                        {site.address.line1},<br />
                         {site.address.line2},<br />
                         {site.address.area}, {site.address.city}<br />
                         {site.address.state} — {site.address.pin}

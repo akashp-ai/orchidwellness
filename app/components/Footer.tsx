@@ -108,7 +108,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-1.5 text-charcoal-400 text-xs">
                 <MapPin size={12} className="flex-shrink-0 mt-0.5" />
-                <span>{site.address.line2}, {site.address.area}, {site.address.city}</span>
+                <span>{site.address.line1}, {site.address.line2}, {site.address.area}, {site.address.city} — {site.address.pin}</span>
               </li>
             </ul>
           </div>
