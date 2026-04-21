@@ -21,9 +21,7 @@ export const metadata: Metadata = {
   title: site.seo.defaultTitle,
   description: site.seo.defaultDescription,
   keywords: site.seo.keywords,
-  metadataBase: new URL(
-    site.seo.siteUrl.startsWith("http") ? site.seo.siteUrl : "https://akashp-ai.github.io"
-  ),
+  metadataBase: new URL("https://orchidluxuryspa.com"),
   openGraph: {
     title: site.seo.defaultTitle,
     description: site.seo.defaultDescription,
@@ -56,17 +54,19 @@ export const metadata: Metadata = {
   },
 };
 
-// LocalBusiness JSON-LD schema
+// LocalBusiness JSON-LD schema — dual type for max Google visibility
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "BeautySalon",
+  "@type": ["DaySpa", "BeautySalon", "HealthAndBeautyBusiness"],
   name: site.brand.name,
-  description: site.brand.description,
+  alternateName: ["Orchid Luxury Spa", "Orchid Spa Kolhapur", "Orchid Unisex Salon and Spa"],
+  description: site.seo.defaultDescription,
   url: site.seo.siteUrl,
-  telephone: site.contact.phone,
+  telephone: ["+917276347855", "+917276997855"],
+  email: site.contact.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: `${site.address.line1}, ${site.address.line2}, ${site.address.area}`,
+    streetAddress: `${site.address.line1}, ${site.address.line2}`,
     addressLocality: site.address.city,
     addressRegion: site.address.state,
     postalCode: site.address.pin,
@@ -77,6 +77,7 @@ const structuredData = {
     latitude: "16.7112701",
     longitude: "74.2405197",
   },
+  hasMap: site.address.googleMapsUrl,
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -96,11 +97,22 @@ const structuredData = {
   priceRange: "₹₹",
   currenciesAccepted: "INR",
   paymentAccepted: "Cash, UPI, Cards",
+  areaServed: {
+    "@type": "City",
+    name: "Kolhapur",
+  },
+  serviceType: [
+    "Spa", "Massage", "Body Massage", "Swedish Massage", "Deep Tissue Massage",
+    "Thai Massage", "Balinese Massage", "Hot Stone Massage", "Aromatherapy Massage",
+    "Couple Massage", "Facial", "Hair Salon", "Salon Services",
+  ],
   sameAs: [
     site.social.instagram,
     site.social.facebook,
     site.social.justdial,
+    site.social.googleReviews,
   ].filter(Boolean),
+  image: `https://orchidluxuryspa.com/media/hero/hero-og.jpg`,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
