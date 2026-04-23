@@ -64,7 +64,7 @@ export default function Testimonials() {
               </div>
               <span className="text-white font-semibold">{reviews.averageRating}</span>
               <span className="text-white/70 text-xs">
-                ({reviews.totalReviews}+ {t("reviews.reviewsLabel")} · {reviews.ratingSource})
+                {reviews.ratingSource}
               </span>
             </div>
           </div>
