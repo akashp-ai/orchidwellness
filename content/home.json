@@ -1,7 +1,7 @@
 {
   "_comment": "EDIT THIS FILE to update the homepage hero text, intro section, and highlights.",
   "hero": {
-    "badge": "Kolhapur's Premier Spa, Massage & Wellness Studio",
+    "badge": "Kolhapur's Luxury Spa, Massage & Wellness Studio",
     "headline": "Heal. Restore.\nFeel Extraordinary.",
     "subheadline": "Expert therapeutic massages, rejuvenating spa rituals, and premium salon care — crafted for athletes, active lifestyles, and everyone who deserves to feel their absolute best.",
     "primaryCta": {
@@ -20,7 +20,7 @@
     "stats": [
       { "value": "Est. 2025", "label": "New Premium Venture" },
       { "value": "4.8★", "label": "Rated on Google" },
-      { "value": "5000+", "label": "Happy Clients" },
+      { "value": "1000+", "label": "Happy Clients" },
       { "value": "20+", "label": "Services Offered" }
     ]
   },
@@ -28,7 +28,7 @@
     {
       "icon": "Activity",
       "title": "Therapeutic Recovery",
-      "description": "From deep tissue and sports massage to hot stone therapy — our treatments target post-workout soreness, muscle tension, joint stiffness, and chronic body pain with clinical precision."
+      "description": "From deep tissue and sports massage to hot stone therapy — our treatments target post-workout soreness, muscle tension, and general body discomfort with expert technique."
     },
     {
       "icon": "Users",

@@ -35,7 +35,7 @@
         },
         {
           "name": "Abhyanga (Ayurvedic Oil Massage)",
-          "description": "Warm herbal oils and Ayurvedic strokes detoxify the body, nourish the skin, and restore inner calm and balance."
+          "description": "Warm herbal oils and Ayurvedic strokes nourish the skin, calm the nervous system, and restore inner balance and wellbeing."
         },
         {
           "name": "Couple's Massage",
@@ -63,11 +63,11 @@
         },
         {
           "name": "Herbal Body Wrap",
-          "description": "Detoxifying body wrap using herbal-infused linen to draw out impurities, tighten skin, and restore glow."
+          "description": "Relaxing herbal body wrap that soothes the skin, eases muscle tension, and promotes a deep sense of rest and renewal."
         },
         {
           "name": "Steam Therapy Session",
-          "description": "Open pores, flush toxins, and deeply relax with a therapeutic steam session before your treatment."
+          "description": "Open pores, ease muscle tension, and deeply relax with a therapeutic steam session before your treatment."
         },
         {
           "name": "De-Stress Body Ritual",
@@ -163,7 +163,7 @@
         },
         {
           "name": "Youth Renewal Facial",
-          "description": "Pentapeptide-powered treatment that reduces fine lines, delivers deep hydration and plumping, and boosts cellular turnover for younger-looking skin."
+          "description": "Advanced treatment that hydrates deeply, plumps the skin, and visibly improves the appearance of fine lines for a fresher, younger-looking complexion."
         }
       ]
     },
@@ -219,7 +219,7 @@
         },
         {
           "name": "Scalp Detox Ritual",
-          "description": "Deep-cleansing scalp treatment to remove buildup, balance oil production, and stimulate healthy hair growth."
+          "description": "Deep-cleansing scalp treatment to remove buildup, balance oil production, and promote a healthier, refreshed scalp."
         }
       ]
     },
