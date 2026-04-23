@@ -54,6 +54,54 @@ export const metadata: Metadata = {
   },
 };
 
+// FAQ JSON-LD schema — enables "People also ask" rich results in Google Search
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What services does Orchid Luxury Spa offer in Kolhapur?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Orchid Luxury Spa offers Swedish massage, Deep Tissue massage, Thai massage, Balinese massage, Hot Stone massage, Aromatherapy massage, Couple massage, Body scrub, Body polishing, Body wrap, Facials, Hair salon services, and more. We are a full-service unisex salon and spa in Kolhapur.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is Orchid Luxury Spa located in Kolhapur?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Orchid Unisex Salon & Spa is located at CS 247/3, E Ward, Aditya Corner, Tarabai Park, Near Kelavkar Hospital, Kolhapur — 416003, Maharashtra, India.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the timings of Orchid Luxury Spa Kolhapur?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Orchid Luxury Spa is open all days (Monday to Sunday) from 11:00 AM to 10:00 PM.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I book an appointment at Orchid Luxury Spa Kolhapur?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can book an appointment by calling us at 72763 47855 or 72769 97855, or by messaging us on WhatsApp. Walk-ins are also welcome.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Orchid Luxury Spa a unisex salon and spa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Orchid is a premium unisex salon and spa in Kolhapur. We offer all services for both men and women, including massages, facials, hair care, and body treatments.",
+      },
+    },
+  ],
+};
+
 // LocalBusiness JSON-LD schema — dual type for max Google visibility
 const structuredData = {
   "@context": "https://schema.org",
@@ -122,6 +170,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
         />
 
         {/*
